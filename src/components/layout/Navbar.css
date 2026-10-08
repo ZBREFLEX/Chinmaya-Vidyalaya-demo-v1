@@ -1,0 +1,61 @@
+﻿.navbar { position: sticky; top: 0; z-index: 30; background: #fafdff; }
+.navbar__inner { min-height: 94px; padding: 15px 4.2% 15px 5.8%; display: flex; align-items: center; gap: clamp(16px, 2.1vw, 36px); max-width: 1920px; margin-inline: auto; }
+.school-brand { display: flex; align-items: center; gap: 12px; flex-shrink: 0; color: var(--color-heading); }
+.school-brand strong { display: block; font-size: clamp(17px, 1.65vw, 23px); letter-spacing: -.035em; font-weight: 650; }
+.school-brand small { display: block; font-size: clamp(9px, .75vw, 11px); margin-top: 4px; }
+.school-brand__mark { width: 40px; height: 65px; flex-shrink: 0; }
+.school-brand__mark img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.navbar__links { display: flex; gap: clamp(14px, 1.7vw, 26px); align-items: center; margin-left: auto; }
+.navbar__links a { color: var(--color-heading); font-size: clamp(10px, .8vw, 13px); font-weight: 600; white-space: nowrap; transition: color .2s; }
+.navbar__links a:hover, .navbar__links a[aria-current] { color: var(--color-action); }
+.navbar__enquire { min-height: 48px; font-size: 12px; padding: 12px 25px; flex-shrink: 0; }
+.menu-toggle, .navbar__links .navbar__mobile-link { display: none; }
+@media (max-width: 1190px) {
+  .navbar__inner { flex-wrap: wrap; gap: 20px; min-height: 86px; }
+  .navbar__enquire { margin-left: auto; }
+  .menu-toggle { display: flex; flex-direction: column; justify-content: center; gap: 5px; width: 44px; height: 44px; padding: 10px; border: 1px solid var(--color-border); border-radius: 50%; background: transparent; }
+  .menu-toggle span { width: 22px; height: 1.5px; background: var(--color-heading); }
+  .navbar__links { display: none; order: 5; width: 100%; margin: 0; padding: 16px 0 24px; }
+  .navbar__links.is-open { display: flex; align-items: stretch; flex-direction: column; gap: 4px; }
+  .navbar__links a { padding: 12px 8px; font-size: 16px; }
+  .navbar__links .navbar__mobile-link { display: flex; }
+  .navbar__links .button { margin-top: 12px; align-self: flex-start; padding-inline: 24px; }
+}
+@media (max-width: 540px) { .navbar__inner { padding: 10px 6%; gap: 12px; min-height: 82px; } .navbar__enquire { display: none; } .menu-toggle { margin-left: auto; } .school-brand strong { font-size: 17px; } .school-brand small { font-size: 8px; } .school-brand__mark { transform: scale(.8); width: 32px; margin-right: -4px; transform-origin: left center; } }
+
+/* Click-to-open disclosures work with mouse, touch and keyboard. */
+.nav-dropdown { position: relative; }
+.nav-dropdown__trigger { display: flex; align-items: center; gap: 5px; border: 0; padding: 12px 0; background: transparent; color: var(--color-heading); font-size: clamp(10px, .8vw, 13px); font-weight: 600; white-space: nowrap; transition: color .2s; }
+.nav-dropdown__trigger svg { width: 12px; height: 12px; fill: none; stroke: currentColor; stroke-width: 1.5; transition: transform .22s ease; }
+.nav-dropdown.is-open .nav-dropdown__trigger, .nav-dropdown__trigger:hover { color: var(--color-action); }
+.nav-dropdown.is-open .nav-dropdown__trigger svg { transform: rotate(180deg); }
+.nav-dropdown__panel { position: absolute; top: calc(100% + 12px); left: -24px; width: 280px; padding: 8px; border: 1px solid var(--color-border); border-radius: 18px; background: white; box-shadow: 0 16px 40px #14344912; opacity: 0; visibility: hidden; transform: translateY(8px); transition: opacity .2s ease, transform .2s ease, visibility .2s; }
+.nav-dropdown:nth-last-of-type(-n+2) .nav-dropdown__panel { left: auto; right: -24px; }
+.nav-dropdown.is-open .nav-dropdown__panel { opacity: 1; visibility: visible; transform: translateY(0); }
+.nav-dropdown__content { padding: 10px; }
+.nav-dropdown__eyebrow { margin: 0 10px 12px; color: var(--color-action); font-size: 10px; letter-spacing: .16em; text-transform: uppercase; }
+.nav-dropdown__content ul { list-style: none; padding: 0; margin: 0; }
+.nav-dropdown__item { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 12px; text-align: left; padding: 13px 10px; border: 0; border-radius: 8px; background: transparent; color: var(--color-heading); font-size: 13px; font-weight: 500; cursor: default; opacity: 1; }
+.nav-dropdown__item span { font-size: 9px; font-weight: 400; color: var(--color-text); white-space: nowrap; }
+.navbar__links a.nav-dropdown__item { font-size: 13px; font-weight: 500; cursor: pointer; }
+.navbar__links a.nav-dropdown__item:hover { background: #eaf5fa; }
+.navbar__links .nav-dropdown__enquiry { display: flex; justify-content: space-between; margin-top: 12px; padding: 13px 10px; border-top: 1px solid var(--color-border); color: var(--color-action); font-size: 12px; }
+.menu-toggle span { transition: transform .22s ease, opacity .22s ease; }
+.menu-toggle.is-open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.menu-toggle.is-open span:nth-child(2) { opacity: 0; }
+.menu-toggle.is-open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+@media (min-width: 1191px) { .navbar__links { gap: clamp(12px, 1.2vw, 22px); } }
+@media (max-width: 1190px) {
+  .navbar__links.is-open { max-height: calc(100dvh - 110px); overflow-y: auto; animation: nav-reveal .22s ease both; }
+  .nav-dropdown { border-bottom: 1px solid var(--color-border); }
+  .nav-dropdown__trigger { width: 100%; justify-content: space-between; padding: 15px 8px; font-size: 16px; }
+  .nav-dropdown__trigger svg { width: 16px; height: 16px; }
+  .nav-dropdown__panel, .nav-dropdown:nth-last-of-type(-n+2) .nav-dropdown__panel { position: static; width: 100%; padding: 0; border: 0; border-radius: 12px; box-shadow: none; background: var(--color-soft-blue); display: grid; grid-template-rows: 0fr; opacity: 0; transform: none; transition: grid-template-rows .25s ease, opacity .2s ease, visibility .25s; }
+  .nav-dropdown.is-open .nav-dropdown__panel { grid-template-rows: 1fr; }
+  .nav-dropdown__content { min-height: 0; overflow: hidden; padding: 0 12px; }
+  .nav-dropdown__eyebrow { display: none; }
+  .nav-dropdown__item { padding-block: 14px; font-size: 14px; }
+  .navbar__links .nav-dropdown__enquiry { font-size: 13px; margin-bottom: 10px; }
+}
+@keyframes nav-reveal { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: translateY(0); } }
+@media (prefers-reduced-motion: reduce) { .navbar__links.is-open { animation: none; } }

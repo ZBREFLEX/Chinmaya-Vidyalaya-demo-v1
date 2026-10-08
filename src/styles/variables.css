@@ -1,0 +1,18 @@
+﻿:root {
+  --color-primary: #48b5d7;
+  --color-primary-dark: #48b5d7;
+  --color-action: #14758d;
+  --color-white: #ffffff;
+  --color-ash: #f4f6f7;
+  --color-soft-blue: #eff9fc;
+  --color-heading: #143449;
+  --color-text: #6b7985;
+  --color-border: #dde5ec;
+  --container-width: 1280px;
+  --section-space: 140px;
+  --section-space-tablet: 110px;
+  --section-space-mobile: 80px;
+  --radius-small: 12px;
+  --radius-medium: 24px;
+  --radius-large: 40px;
+}

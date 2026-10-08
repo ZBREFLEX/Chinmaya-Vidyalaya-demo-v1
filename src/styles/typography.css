@@ -1,0 +1,4 @@
+﻿body { font-family: 'Segoe UI', Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+h1, h2, h3 { color: var(--color-heading); margin: 0; letter-spacing: -.045em; }
+p { line-height: 1.65; }
+.eyebrow { color: var(--color-text); font-size: .68rem; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; }
