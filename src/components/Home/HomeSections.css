@@ -1,8 +1,8 @@
 .home-section { position: relative; overflow: hidden; scroll-margin-top: 110px; }
-.section-shell { width: min(100% - 96px, 1280px); margin-inline: auto; }
+.section-shell { width: min(88%, 1690px); margin-inline: auto; }
 .home-section .section-shell { padding-block: 78px; }
 .section-copy .eyebrow { margin: 0 0 16px; }
-.section-copy h2 { font-size: clamp(32px, 3.15vw, 48px); line-height: 1.12; font-weight: 650; }
+.section-copy h2 { font-size: clamp(32px, 3.15vw, 56px); line-height: 1.12; font-weight: 650; }
 .section-copy h2 em { font-style: normal; color: var(--color-primary); }
 .section-copy > p:not(.eyebrow), .achievements__slide p { font-size: 16px; line-height: 1.6; margin: 22px 0 28px; max-width: 440px; }
 .reference-photo { position: relative; overflow: hidden; aspect-ratio: var(--photo-ratio); }
@@ -11,19 +11,20 @@
 .kindergarten { background: linear-gradient(120deg, #f2fbff, #fff 65%); }
 .kindergarten::before { content: ''; position: absolute; width: 300px; height: 300px; border-radius: 50%; background: #dbf3fc; left: -130px; top: 0; }
 .kindergarten__grid { display: grid; grid-template-columns: 1.25fr 1fr .55fr; align-items: center; gap: 42px; position: relative; }
-.kindergarten__photo { border-radius: 110px 130px 75px 0; }
+.kindergarten__photo { width: 100%; height: auto; border-radius: 110px 130px 75px 0; }
 .kindergarten__features { padding: 0; margin: 0; list-style: none; display: grid; gap: 22px; }
 .kindergarten__features li { display: flex; align-items: center; gap: 13px; font-size: 12px; font-weight: 600; color: var(--color-heading); line-height: 1.6; }
 .feature-icon { display: grid; place-items: center; width: 43px; height: 43px; border-radius: 50%; background: #e0f5fc; color: var(--color-primary); flex-shrink: 0; }
 .feature-icon svg { width: 25px; height: 25px; }
 .approach__grid { display: grid; grid-template-columns: .8fr 1.5fr; align-items: center; gap: 90px; }
 .approach__visual { position: relative; }
-.approach__visual > img { width: 100%; height: 460px; object-fit: cover; border-radius: 45% 0 0 30%; }
+.approach__visual > img { width: 100%; height: clamp(460px, 32vw, 610px); object-fit: cover; border-radius: 45% 0 0 30%; }
 .approach__note { position: absolute; bottom: -1px; right: -1px; background: #fff; padding: 32px 30px 24px 45px; border-radius: 65px 0 0 0; font-size: 14px; line-height: 1.6; scroll-margin-top: 150px; }
 .approach__note span { display: block; width: 45px; height: 2px; background: var(--color-primary); margin-top: 13px; }
 .achievements { background: linear-gradient(135deg, #fff, #f2faff); }
 .achievements__grid { display: grid; grid-template-columns: 1.2fr 1fr; align-items: center; gap: 80px; }
 .achievements__photo { aspect-ratio: 380 / 292; border-radius: 0 110px 110px 0; }
+img.achievements__photo { width: 100%; object-fit: cover; object-position: center; }
 .achievements__slide { min-height: 225px; }
 .carousel-controls { display: flex; align-items: center; justify-content: flex-end; gap: 28px; margin-top: 40px; font-size: 12px; letter-spacing: .08em; }
 .carousel-controls button { width: 44px; height: 44px; border-radius: 50%; border: 0; background: #e9f3f8; color: var(--color-heading); font-size: 22px; transition: background .2s; }
@@ -43,7 +44,7 @@
 .admissions__doodle > span { font-family: 'Segoe Print', cursive; font-size: 23px; line-height: 1.25; transform: rotate(-8deg); }
 .admissions__actions { display: flex; gap: 15px; }
 .site-footer { background: #f5fbfe; scroll-margin-top: 110px; }
-.footer-grid { padding-block: 55px; display: grid; grid-template-columns: 1.4fr .7fr 1fr 1fr; gap: 55px; }
+.footer-grid { padding-block: 55px; display: grid; grid-template-columns: 1.2fr .6fr .9fr 1.5fr; gap: 40px; }
 .footer-brand .school-brand strong { font-size: 18px; }
 .footer-brand .school-brand small { font-size: 9px; }
 .footer-brand > p { font-size: 13px; max-width: 290px; margin-top: 24px; }
@@ -52,11 +53,14 @@
 .site-footer a:hover { color: var(--color-action); }
 .site-footer address { font-style: normal; font-size: 13px; line-height: 1.7; }
 .site-footer address p { margin: 0 0 20px; }
-.footer-location { display: flex; flex-direction: column; align-items: center; text-align: center; padding: 20px 12px; border-radius: 12px; background: repeating-linear-gradient(35deg, #e8f2f6, #e8f2f6 25px, #f3f9fc 25px, #f3f9fc 28px); font-size: 12px; gap: 5px; }
-.footer-location svg { width: 28px; height: 32px; stroke: var(--color-action); fill: #d8f0fa; stroke-width: 1.5; margin-bottom: 6px; }
-.footer-location__link { margin-top: 10px; color: var(--color-action); }
+.footer-location { display: block; width: 100%; height: 300px; border: 0; border-radius: 12px; background: #e8f2f6; }
 .footer-bottom { background: #eaf6fc; padding-block: 23px; font-size: 11px; }
 .footer-bottom .section-shell { display: flex; justify-content: space-between; gap: 20px; }
+@media (min-width: 1400px) {
+  .section-copy > p:not(.eyebrow), .achievements__slide p { font-size: 18px; max-width: 520px; }
+  .kindergarten__features li { font-size: 14px; }
+  .kindergarten__features { gap: 28px; }
+}
 @media (max-width: 1100px) {
   .section-shell { width: calc(100% - 64px); }
   .kindergarten__grid { grid-template-columns: 1fr 1fr; gap: 35px; }
@@ -92,6 +96,7 @@
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 30px 22px; padding-block: 40px; }
   .footer-brand { grid-column: 1 / -1; }
   .footer-grid > div:last-child { grid-column: 1 / -1; }
+  .footer-location { height: 260px; }
   .site-footer address a { overflow-wrap: anywhere; }
   .footer-bottom .section-shell { flex-direction: column; gap: 10px; }
 }
