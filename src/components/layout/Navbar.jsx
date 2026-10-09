@@ -15,10 +15,18 @@ const sectionLinks = { 'Our Story': '#about', 'Vision & Values': '#our-values', 
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [isFloating, setIsFloating] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);
   const header = useRef(null);
   const toggle = useRef(null);
   const dropdownTriggers = useRef([]);
+
+  useEffect(() => {
+    const updateFloating = () => setIsFloating(window.scrollY > 24);
+    updateFloating();
+    window.addEventListener('scroll', updateFloating, { passive: true });
+    return () => window.removeEventListener('scroll', updateFloating);
+  }, []);
 
   useEffect(() => {
     const onPointerDown = event => {
@@ -45,7 +53,7 @@ export default function Navbar() {
     };
   }, [menuOpen, openDropdown]);
 
-  return <header ref={header} className="navbar"><div className="navbar__inner">
+  return <header ref={header} className={`navbar${isFloating ? ' navbar--floating' : ''}${menuOpen ? ' navbar--menu-open' : ''}`}><div className="navbar__inner">
     <a className="school-brand" href="/" aria-label="Chinmaya Vidyalaya home"><span className="school-brand__mark" aria-hidden="true"><img src={logo} alt="" /></span><span><strong>Chinmaya Vidyalaya</strong><small>Chinmaya Gardens, Kolazhy, Thrissur</small></span></a>
     <nav id="primary-navigation" className={`navbar__links ${menuOpen ? 'is-open' : ''}`} aria-label="Primary">
       <a href="/" aria-current="page">Home</a>
