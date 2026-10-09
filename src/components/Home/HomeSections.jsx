@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import reference from '../../assets/images/hero/design-reference.png';
 import campus from '../../assets/images/hero/campus.jpeg';
 import kindergarten from '../../assets/images/kindergarten.png';
@@ -31,6 +31,15 @@ function FeatureIcon({ index }) {
 
 export default function HomeSections() {
   const [active, setActive] = useState(0);
+
+  useEffect(() => {
+
+    const timer = window.setTimeout(() => {
+      setActive(current => (current + 1) % highlights.length);
+    }, 5000);
+    return () => window.clearTimeout(timer);
+  }, [active]);
+
   const slide = highlights[active];
   return <>
     <section className="home-section kindergarten" id="kindergarten" aria-labelledby="kindergarten-title">
@@ -46,7 +55,7 @@ export default function HomeSections() {
     </section>
 
     <section className="home-section achievements" id="achievements" aria-labelledby="achievement-title">
-      <div className="section-shell achievements__grid"><Photo crop={slide.crop} image={slide.image} label={slide.label} className="achievements__photo" /><div className="section-copy"><p className="eyebrow">Achievements</p><div className="achievements__slide" aria-live="polite" aria-atomic="true"><h2 id="achievement-title">{slide.title}</h2><p>{slide.text}</p></div><a className="button button--outline" href="mailto:chinvidhya@gmail.com?subject=Student%20achievements%20enquiry">Discover Our Achievements <span aria-hidden="true">⟶</span></a><div className="carousel-controls"><button type="button" aria-label="Previous highlight" onClick={() => setActive((active + 2) % 3)}>←</button><span><strong>{String(active + 1).padStart(2, '0')}</strong> / 03</span><button type="button" aria-label="Next highlight" onClick={() => setActive((active + 1) % 3)}>→</button></div></div></div>
+      <div className="section-shell achievements__grid"><Photo crop={slide.crop} image={slide.image} label={slide.label} className="achievements__photo" /><div className="section-copy"><p className="eyebrow">Achievements</p><div className="achievements__slide" aria-live="off" aria-atomic="true"><h2 id="achievement-title">{slide.title}</h2><p>{slide.text}</p></div><a className="button button--outline" href="mailto:chinvidhya@gmail.com?subject=Student%20achievements%20enquiry">Discover Our Achievements <span aria-hidden="true">⟶</span></a><div className="carousel-controls"><button type="button" aria-label="Previous highlight" onClick={() => setActive(current => (current - 1 + highlights.length) % highlights.length)}>←</button><span><strong>{String(active + 1).padStart(2, '0')}</strong> / 03</span><button type="button" aria-label="Next highlight" onClick={() => setActive(current => (current + 1) % highlights.length)}>→</button></div></div></div>
     </section>
 
     <section className="home-section campus-life" id="campus-life" aria-labelledby="campus-life-title"><div className="section-shell campus-life__grid"><div className="section-copy"><p className="eyebrow">Campus life</p><h2 id="campus-life-title">A vibrant campus<br />for a well-rounded<br />child.</h2><p>From academics to sports to life skills, our campus provides the right environment for every child to discover their potential.</p><a className="button button--primary" href="mailto:chinvidhya@gmail.com?subject=Campus%20life%20enquiry">Explore Campus Life <span aria-hidden="true">⟶</span></a></div><div className="campus-life__photos"><figure><Photo crop={[284, 1390, 122, 195]} label="Student reading in the library" /><figcaption>Discover</figcaption></figure><figure><Photo crop={[422, 1390, 114, 195]} label="Children playing football outdoors" /><figcaption>Play</figcaption></figure><figure><Photo crop={[550, 1390, 100, 195]} label="Children celebrating through traditional dance" /><figcaption>Create</figcaption></figure></div></div></section>
