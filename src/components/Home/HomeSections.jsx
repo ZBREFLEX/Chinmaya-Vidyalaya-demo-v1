@@ -5,11 +5,10 @@ import kindergarten from '../../assets/images/kindergarten.png';
 import soccer from '../../assets/images/soccer.png';
 import studentTrophy from '../../assets/images/student-trophy.png';
 import bharatanatyam from '../../assets/images/bharatanatyam.png';
-import logo from '../../assets/images/chinmaya-logo.jpg';
+import About from '../../pages/About/About';
 import './HomeSections.css';
 
 const enquiry = 'mailto:chinvidhya@gmail.com?subject=Admission%20enquiry';
-const currentYear = new Date().getFullYear();
 const features = ['Play-based learning', 'Caring and experienced teachers', 'Safe and secure environment', 'Focus on overall development'];
 const highlights = [
   { title: <>Our students<br />make us <em>proud.</em></>, text: 'From academic excellence to sports, arts and cultural achievements, we celebrate the curiosity, dedication and talents of our students.', image: studentTrophy, label: 'Smiling student holding a gold trophy while classmates applaud' },
@@ -50,8 +49,8 @@ export default function HomeSections() {
       </div>
     </section>
 
-    <section className="home-section approach" id="about" aria-labelledby="approach-title">
-      <div className="section-shell approach__grid"><div className="section-copy"><p className="eyebrow">Our approach</p><h2 id="approach-title">Education<br />with <em>values</em><br />for life.</h2><p>We combine academic excellence with strong value-based education, helping every child grow into a responsible and compassionate individual.</p><a className="button button--outline" href="#our-values">About Chinmaya Vidyalaya <span aria-hidden="true">⟶</span></a></div><div className="approach__visual"><img src={campus} alt="Chinmaya Vidyalaya courtyard surrounded by school buildings and trees" loading="lazy" /><div className="approach__note" id="our-values">A positive environment<br />to learn, grow and belong.<span /></div></div></div>
+    <section className="home-section approach" id="our-approach" aria-labelledby="approach-title">
+      <div className="section-shell approach__grid"><div className="section-copy"><p className="eyebrow">Our approach</p><h2 id="approach-title">Education<br />with <em>values</em><br />for life.</h2><p>We combine academic excellence with strong value-based education, helping every child grow into a responsible and compassionate individual.</p><a className="button button--outline" href="#about">About Chinmaya Vidyalaya <span aria-hidden="true">⟶</span></a></div><div className="approach__visual"><img src={campus} alt="Chinmaya Vidyalaya courtyard surrounded by school buildings and trees" loading="lazy" /><div className="approach__note" id="our-values">A positive environment<br />to learn, grow and belong.<span /></div></div></div>
     </section>
 
     <section className="home-section achievements" id="achievements" aria-labelledby="achievement-title">
@@ -60,8 +59,10 @@ export default function HomeSections() {
 
     <section className="home-section campus-life" id="campus-life" aria-labelledby="campus-life-title"><div className="section-shell campus-life__grid"><div className="section-copy"><p className="eyebrow">Campus life</p><h2 id="campus-life-title">A vibrant campus<br />for a well-rounded<br />child.</h2><p>From academics to sports to life skills, our campus provides the right environment for every child to discover their potential.</p><a className="button button--primary" href="mailto:chinvidhya@gmail.com?subject=Campus%20life%20enquiry">Explore Campus Life <span aria-hidden="true">⟶</span></a></div><div className="campus-life__photos"><figure><Photo crop={[284, 1390, 122, 195]} label="Student reading in the library" /><figcaption>Discover</figcaption></figure><figure><Photo crop={[422, 1390, 114, 195]} label="Children playing football outdoors" /><figcaption>Play</figcaption></figure><figure><Photo crop={[550, 1390, 100, 195]} label="Children celebrating through traditional dance" /><figcaption>Create</figcaption></figure></div></div></section>
 
+    <About />
+
     <section className="admissions section-shell" id="admissions" aria-labelledby="admissions-title"><div className="section-copy"><p className="eyebrow">Admissions</p><h2 id="admissions-title">Be a part of the<br />Chinmaya Vidyalaya family.</h2><p>Explore admissions for Kindergarten (LKG &amp; UKG) to Class 10.<br />Get in touch with us today.</p></div><div className="admissions__right"><div className="admissions__doodle" aria-hidden="true"><svg viewBox="0 0 80 80"><circle cx="40" cy="40" r="15" /><path d="M40 4v12m0 48v12M4 40h12m48 0h12M14 14l9 9m34 34 9 9M14 66l9-9m34-34 9-9" /></svg><span>Learning.<br />Growing.<br />Together.</span></div><div className="admissions__actions"><a className="button button--primary" href={enquiry}>Enquire Now <span aria-hidden="true">⟶</span></a><a className="button button--outline" href="#contact">Contact Us</a></div></div></section>
 
-    <footer className="site-footer" id="contact"><div className="section-shell footer-grid"><div className="footer-brand"><a className="school-brand" href="/" aria-label="Chinmaya Vidyalaya home"><span className="school-brand__mark"><img src={logo} alt="" loading="lazy" /></span><span><strong>Chinmaya Vidyalaya</strong><small>Chinmaya Gardens, Kolazhy, Thrissur</small></span></a><p>Nurturing young minds with values, knowledge and a spirit of service for a brighter tomorrow.</p></div><div><h3>Quick Links</h3><ul className="footer-links">{[['Home', '#main'], ['About', '#about'], ['Kindergarten', '#kindergarten'], ['Campus Life', '#campus-life'], ['Achievements', '#achievements'], ['Admissions', '#admissions'], ['Contact', '#contact']].map(([label, href]) => <li key={label}><a href={href}>{label}</a></li>)}</ul></div><div><h3>Contact Us</h3><address><p>Chinmaya Gardens,<br />Kolazhy, Thrissur, Kerala</p><a href="mailto:chinvidhya@gmail.com">chinvidhya@gmail.com</a></address></div><div><h3>Location</h3><iframe className="footer-location" title="Chinmaya Vidyalaya location on Google Maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4652.426201624954!2d76.2153059839775!3d10.568750236108754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba7eed9472780cd%3A0xf6af93af2cef023!2sChinmaya%20Vidyalaya!5e1!3m2!1sen!2sin!4v1791574256488!5m2!1sen!2sin" width="600" height="450" allowFullScreen loading="lazy" referrerPolicy="strict-origin-when-cross-origin" /></div></div><div className="footer-bottom"><div className="section-shell"><span>© {currentYear} Chinmaya Vidyalaya. All rights reserved.</span><span>Designed with care for brighter tomorrows.</span></div></div></footer>
+
   </>;
 }
