@@ -1,4 +1,5 @@
-﻿import campus from "../../assets/images/hero/campus.jpeg";
+import EnquiryButton from '../enquiry/EnquiryButton';
+import campus from "../../assets/images/hero/campus.jpeg";
 import "./Hero.css";
 export default function Hero() {
   return (
@@ -55,12 +56,10 @@ export default function Hero() {
           compassion and a strong sense of Indian culture.
         </p>
         <div className="hero__actions">
-          <a
-            className="button button--primary"
-            href="mailto:chinvidhya@gmail.com?subject=Admission%20enquiry"
-          >
+          <EnquiryButton
+            className="button button--primary">
             Enquire Now <span aria-hidden="true">⟶</span>
-          </a>
+          </EnquiryButton>
           <button
             className="button button--outline"
             type="button"

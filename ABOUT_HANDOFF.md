@@ -70,3 +70,13 @@ The About opening is now a section heading rather than a second page-level headi
 Previously shared `/about` and `/about#detail` links continue to reveal the appropriate content at the canonical root URL. Search, source content, detail hashes, directory filters, disclosures, animation, reduced motion, and print handling remain intact.
 
 Single-page browser checks pass at 1440px, 768px and 390px: one main/header/footer/page heading, unique IDs, complete Home/About sections, direct navbar anchors and sticky-header offsets, mobile menu closing, search/dialog navigation, browser history, legacy About links, admissions links, and no horizontal overflow. Build, lint and source/search model tests pass.
+
+## WhatsApp admission enquiries
+
+All Enquire Now buttons (header, mobile menu, hero and Admissions section) and the admissions dropdown enquiry open the same accessible admission form. It collects parent/guardian name, contact number, student name and the class applying for (LKG, UKG, Classes 1–10). Required fields use native browser validation.
+
+Continue to WhatsApp opens a WhatsApp chat with an encoded message containing those details. The parent reviews and sends the message in WhatsApp. To change the recipient for every enquiry button, edit only `whatsappNumber` in `src/config/contact.js`. Include the country code; spaces and a leading `+` are supported and removed when building the link. No enquiry backend or local storage is used.
+
+The shared form lives in `src/components/enquiry/EnquiryProvider.jsx`, with a native modal dialog, Escape/close controls, scroll locking and focus restoration. `EnquiryButton.jsx` connects each entry point. Other topic-specific email links remain in place.
+
+Verification: build, lint and existing model tests pass. Browser checks at 1440px and 390px verify opening from the header and hero, initial focus, required-field validation, close/Escape/focus return, responsive sizing, and the exact outgoing WhatsApp number and decoded parent/student/class message. The WhatsApp navigation was intercepted during verification; no message was sent.

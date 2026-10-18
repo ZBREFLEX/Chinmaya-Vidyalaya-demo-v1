@@ -1,3 +1,4 @@
+import EnquiryButton from '../enquiry/EnquiryButton';
 import { useEffect, useState } from 'react';
 import reference from '../../assets/images/hero/design-reference.png';
 import campus from '../../assets/images/hero/campus.jpeg';
@@ -8,7 +9,6 @@ import bharatanatyam from '../../assets/images/bharatanatyam.png';
 import About from '../../pages/About/About';
 import './HomeSections.css';
 
-const enquiry = 'mailto:chinvidhya@gmail.com?subject=Admission%20enquiry';
 const features = ['Play-based learning', 'Caring and experienced teachers', 'Safe and secure environment', 'Focus on overall development'];
 const highlights = [
   { title: <>Our students<br />make us <em>proud.</em></>, text: 'From academic excellence to sports, arts and cultural achievements, we celebrate the curiosity, dedication and talents of our students.', image: studentTrophy, label: 'Smiling student holding a gold trophy while classmates applaud' },
@@ -61,7 +61,7 @@ export default function HomeSections() {
 
     <About />
 
-    <section className="admissions section-shell" id="admissions" aria-labelledby="admissions-title"><div className="section-copy"><p className="eyebrow">Admissions</p><h2 id="admissions-title">Be a part of the<br />Chinmaya Vidyalaya family.</h2><p>Explore admissions for Kindergarten (LKG &amp; UKG) to Class 10.<br />Get in touch with us today.</p></div><div className="admissions__right"><div className="admissions__doodle" aria-hidden="true"><svg viewBox="0 0 80 80"><circle cx="40" cy="40" r="15" /><path d="M40 4v12m0 48v12M4 40h12m48 0h12M14 14l9 9m34 34 9 9M14 66l9-9m34-34 9-9" /></svg><span>Learning.<br />Growing.<br />Together.</span></div><div className="admissions__actions"><a className="button button--primary" href={enquiry}>Enquire Now <span aria-hidden="true">⟶</span></a><a className="button button--outline" href="#contact">Contact Us</a></div></div></section>
+    <section className="admissions section-shell" id="admissions" aria-labelledby="admissions-title"><div className="section-copy"><p className="eyebrow">Admissions</p><h2 id="admissions-title">Be a part of the<br />Chinmaya Vidyalaya family.</h2><p>Explore admissions for Kindergarten (LKG &amp; UKG) to Class 10.<br />Get in touch with us today.</p></div><div className="admissions__right"><div className="admissions__doodle" aria-hidden="true"><svg viewBox="0 0 80 80"><circle cx="40" cy="40" r="15" /><path d="M40 4v12m0 48v12M4 40h12m48 0h12M14 14l9 9m34 34 9 9M14 66l9-9m34-34 9-9" /></svg><span>Learning.<br />Growing.<br />Together.</span></div><div className="admissions__actions"><EnquiryButton className="button button--primary">Enquire Now <span aria-hidden="true">⟶</span></EnquiryButton><a className="button button--outline" href="#contact">Contact Us</a></div></div></section>
 
 
   </>;

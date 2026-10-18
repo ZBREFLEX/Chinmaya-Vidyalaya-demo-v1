@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import Navbar from './components/layout/Navbar';
 import Home from './pages/Home/Home';
 import Footer from './components/layout/Footer';
+import EnquiryProvider from './components/enquiry/EnquiryProvider';
 
 export default function App() {
   useEffect(() => {
@@ -13,11 +14,11 @@ export default function App() {
     }
   }, []);
   return (
-    <>
+    <EnquiryProvider>
       <a className="skip-link" href="#main">Skip to content</a>
       <Navbar />
       <Home />
       <Footer />
-    </>
+    </EnquiryProvider>
   );
 }

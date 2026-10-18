@@ -1,3 +1,4 @@
+import EnquiryButton from '../enquiry/EnquiryButton';
 import { useEffect, useRef, useState } from 'react';
 import logo from '../../assets/images/chinmaya-logo.jpg';
 import './Navbar.css';
@@ -10,7 +11,6 @@ const destinations = [
   { label: 'Achievements', items: ['Academic Results', 'Student Achievements', 'School Highlights'] },
   { label: 'Admissions', items: ['Admission Process', 'Eligibility', 'School Prospectus'] },
 ];
-const enquiry = 'mailto:chinvidhya@gmail.com?subject=Admission%20enquiry';
 const sectionLinks = { 'About Chinmaya': '#about', 'Our Story': '#story', 'Motto': '#motto', 'Vision & Values': '#vision', "Principal’s Message": '#principal', 'Management': '#management', 'Administration': '#administration', 'Staff': '#staff', 'Rules & Regulation': '#rules', 'Early Learning': '#kindergarten', 'LKG & UKG': '#kindergarten', 'Learning Environment': '#kindergarten', 'Our Campus': '#campus-life', 'Sports & Activities': '#campus-life', 'Clubs & Culture': '#campus-life', 'Student Achievements': '#achievements', 'School Highlights': '#achievements', 'Admission Process': '#admissions' };
 
 export default function Navbar() {
@@ -90,15 +90,15 @@ export default function Navbar() {
             <div className="nav-dropdown__content">
               <p className="nav-dropdown__eyebrow">{label}</p>
               <ul>{items.map(item => <li key={item}>{sectionLinks[item] ? <a className="nav-dropdown__item" href={sectionLinks[item]} onClick={() => { setOpenDropdown(null); setMenuOpen(false); }}>{item}<span aria-hidden="true">↗</span></a> : <button className="nav-dropdown__item" disabled>{item}<span>Coming soon</span></button>}</li>)}</ul>
-              {label === 'Admissions' && <a className="nav-dropdown__enquiry" href={enquiry}>Enquire about admissions <span aria-hidden="true">⟶</span></a>}
+              {label === 'Admissions' && <EnquiryButton onClick={() => { setMenuOpen(false); setOpenDropdown(null); }} className="nav-dropdown__enquiry">Enquire about admissions <span aria-hidden="true">⟶</span></EnquiryButton>}
             </div>
           </div>
         </div>;
       })}
       <a className="navbar__mobile-link" href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
-      <a className="button button--primary navbar__mobile-link" href={enquiry}>Enquire Now <span aria-hidden="true">⟶</span></a>
+      <EnquiryButton onClick={() => { setMenuOpen(false); setOpenDropdown(null); }} className="button button--primary navbar__mobile-link">Enquire Now <span aria-hidden="true">⟶</span></EnquiryButton>
     </nav>
-    <a className="button button--primary navbar__enquire" href={enquiry}>Enquire Now <span aria-hidden="true">⟶</span></a>
+    <EnquiryButton onClick={() => { setMenuOpen(false); setOpenDropdown(null); }} className="button button--primary navbar__enquire">Enquire Now <span aria-hidden="true">⟶</span></EnquiryButton>
     <button ref={toggle} className={`menu-toggle ${menuOpen ? 'is-open' : ''}`} aria-label={menuOpen ? 'Close menu' : 'Open menu'} aria-controls="primary-navigation" aria-expanded={menuOpen} onClick={() => { setMenuOpen(!menuOpen); setOpenDropdown(null); }}><span /><span /><span /></button>
   </div></header>;
 }
