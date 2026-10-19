@@ -2,17 +2,21 @@ import EnquiryButton from '../enquiry/EnquiryButton';
 import { useEffect, useRef, useState } from 'react';
 import logo from '../../assets/images/chinmaya-logo.jpg';
 import './Navbar.css';
+import { lifeSections } from '../../content/lifeNavigation';
+import { academicSections } from '../../content/academicsModel';
 import { campusSectionHref } from '../../content/campusNavigation';
 
 const destinations = [
   { label: 'About', items: ['About Chinmaya', 'Our Story', 'Motto', 'Vision & Values', "Principal’s Message", 'Management', 'Administration', 'Staff', 'Rules & Regulation'] },
   { label: 'Kindergarten', items: ['Early Learning', 'LKG & UKG', 'Learning Environment'] },
-  { label: 'Academics', items: ['Curriculum', 'Primary School', 'Secondary School', 'Faculty'] },
-  { label: 'Campus Life', items: ['Our Campus', 'Sports & Activities', 'Clubs & Culture', 'Gallery'] },
+  { label: 'Academics', items: academicSections.map(([, label]) => label) },
+  { label: 'Campus Life', items: lifeSections.map(([, label]) => label) },
   { label: 'Incampus', items: ['Infrastructure', 'Verdant View', 'Facilities'] },
-  { label: 'Achievements', items: ['Academic Results', 'Student Achievements', 'School Highlights'] },
+  { label: 'Achievements', items: ['Featured recognition', 'Browse achievements'] },
   { label: 'Admissions', items: ['Admission Process', 'Eligibility', 'School Prospectus'] },
 ];
+const lifeLinks = Object.fromEntries(lifeSections.map(([id, label]) => [label, id]));
+const academicLinks = Object.fromEntries(academicSections.map(([id, label]) => [label, id]));
 const campusLinks = { Infrastructure: 'infrastructure', 'Verdant View': 'verdant-view', Facilities: 'facilities' };
 const sectionLinks = { 'About Chinmaya': '#about', 'Our Story': '#story', 'Motto': '#motto', 'Vision & Values': '#vision', "Principal’s Message": '#principal', 'Management': '#management', 'Administration': '#administration', 'Staff': '#staff', 'Rules & Regulation': '#rules', 'Early Learning': '#kindergarten', 'LKG & UKG': '#kindergarten', 'Learning Environment': '#kindergarten', 'Our Campus': '#campus-life', 'Sports & Activities': '#campus-life', 'Clubs & Culture': '#campus-life', 'Student Achievements': '#achievements', 'School Highlights': '#achievements', 'Admission Process': '#admissions' };
 
@@ -86,8 +90,8 @@ export default function Navbar({ currentPage = 'home' }) {
         return <div className={`nav-dropdown ${isOpen ? 'is-open' : ''}`} key={label} onBlur={event => {
           if (!event.currentTarget.contains(event.relatedTarget)) setOpenDropdown(current => current === index ? null : current);
         }}>
-          {label === 'About' || label === 'Incampus' ? <div className="nav-dropdown__heading">
-            <a className="nav-dropdown__page-link" href={label === 'Incampus' ? '/incampus' : homeLink('#about')} aria-current={label === 'Incampus' ? currentPage === 'incampus' ? 'page' : undefined : activeArea === 'about' ? 'location' : undefined} onClick={() => { setOpenDropdown(null); setMenuOpen(false); }}>{label}</a>
+          {label === 'Achievements' || label === 'About' || label === 'Incampus' || label === 'Academics' || label === 'Campus Life' ? <div className="nav-dropdown__heading">
+            <a className="nav-dropdown__page-link" href={label === 'Achievements' ? '/achievements' : label === 'Campus Life' ? '/campus-life' : label === 'Academics' ? '/academics' : label === 'Incampus' ? '/incampus' : homeLink('#about')} aria-current={label === 'Achievements' ? currentPage === 'achievements' ? 'page' : undefined : label === 'Campus Life' ? currentPage === 'campus-life' ? 'page' : undefined : label === 'Academics' ? currentPage === 'academics' ? 'page' : undefined : label === 'Incampus' ? currentPage === 'incampus' ? 'page' : undefined : activeArea === 'about' ? 'location' : undefined} onClick={() => { setOpenDropdown(null); setMenuOpen(false); }}>{label}</a>
             <button ref={element => { dropdownTriggers.current[index] = element; }} className="nav-dropdown__trigger nav-dropdown__arrow" aria-label={`${label} sections`} aria-expanded={isOpen} aria-controls={`nav-panel-${index}`} onClick={() => setOpenDropdown(isOpen ? null : index)}><svg viewBox="0 0 16 16" aria-hidden="true"><path d="m4 6 4 4 4-4" /></svg></button>
           </div> : <button ref={element => { dropdownTriggers.current[index] = element; }} className="nav-dropdown__trigger" aria-expanded={isOpen} aria-controls={`nav-panel-${index}`} onClick={() => setOpenDropdown(isOpen ? null : index)}>
             {label}<svg viewBox="0 0 16 16" aria-hidden="true"><path d="m4 6 4 4 4-4" /></svg>
@@ -95,7 +99,7 @@ export default function Navbar({ currentPage = 'home' }) {
           <div id={`nav-panel-${index}`} className="nav-dropdown__panel" inert={!isOpen}>
             <div className="nav-dropdown__content">
               <p className="nav-dropdown__eyebrow">{label}</p>
-              <ul>{items.map(item => <li key={item}>{campusLinks[item] ? <a className="nav-dropdown__item" href={campusSectionHref(campusLinks[item], currentPage)} onClick={() => { setOpenDropdown(null); setMenuOpen(false); }}>{item}<span aria-hidden="true">↗</span></a> : sectionLinks[item] ? <a className="nav-dropdown__item" href={homeLink(sectionLinks[item])} onClick={() => { setOpenDropdown(null); setMenuOpen(false); }}>{item}<span aria-hidden="true">↗</span></a> : <button className="nav-dropdown__item" disabled>{item}<span>Coming soon</span></button>}</li>)}</ul>
+              <ul>{items.map(item => <li key={item}>{label === 'Achievements' ? <a className="nav-dropdown__item" href={`/achievements#${item === 'Featured recognition' ? 'featured-recognition' : 'browse-achievements'}`} onClick={() => { setOpenDropdown(null); setMenuOpen(false); }}>{item}<span aria-hidden="true">&#8599;</span></a> : lifeLinks[item] ? <a className="nav-dropdown__item" href={`/campus-life#${lifeLinks[item]}`} onClick={() => { setOpenDropdown(null); setMenuOpen(false); }}>{item}<span aria-hidden="true">↗</span></a> : academicLinks[item] ? <a className="nav-dropdown__item" href={`/academics#${academicLinks[item]}`} onClick={() => { setOpenDropdown(null); setMenuOpen(false); }}>{item}<span aria-hidden="true">↗</span></a> : campusLinks[item] ? <a className="nav-dropdown__item" href={campusSectionHref(campusLinks[item], currentPage)} onClick={() => { setOpenDropdown(null); setMenuOpen(false); }}>{item}<span aria-hidden="true">↗</span></a> : sectionLinks[item] ? <a className="nav-dropdown__item" href={homeLink(sectionLinks[item])} onClick={() => { setOpenDropdown(null); setMenuOpen(false); }}>{item}<span aria-hidden="true">↗</span></a> : <button className="nav-dropdown__item" disabled>{item}<span>Coming soon</span></button>}</li>)}</ul>
               {label === 'Admissions' && <EnquiryButton onClick={() => { setMenuOpen(false); setOpenDropdown(null); }} className="nav-dropdown__enquiry">Enquire about admissions <span aria-hidden="true">⟶</span></EnquiryButton>}
             </div>
           </div>

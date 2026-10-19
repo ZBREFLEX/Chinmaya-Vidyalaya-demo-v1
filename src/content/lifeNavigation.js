@@ -1,0 +1,1 @@
+export const lifeSections = [['life-themes', 'Discover campus life'], ['student-groups', 'Student groups'], ['cvmun', 'CV Model United Nations'], ['campus-stories', 'Campus stories'], ['event-gallery', 'Event Gallery']];

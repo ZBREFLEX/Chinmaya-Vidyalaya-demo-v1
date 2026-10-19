@@ -1,0 +1,2000 @@
+{
+  "combinations": [
+    {
+      "raw": "English, Physics, Chemistry, Biology, Mathematics",
+      "source": {
+        "file": "SUBJECT COMBINATIONS OFFERED IN SENIOR SECONDARY.pdf",
+        "page": 1
+      },
+      "id": "combination-1",
+      "stream": "Science",
+      "number": 1,
+      "subjects": [
+        "English",
+        "Physics",
+        "Chemistry",
+        "Biology",
+        "Mathematics"
+      ],
+      "ambiguous": false
+    },
+    {
+      "raw": "English, Physics, Chemistry, Introductory Computer Science (Python), Mathematics",
+      "source": {
+        "file": "SUBJECT COMBINATIONS OFFERED IN SENIOR SECONDARY.pdf",
+        "page": 1
+      },
+      "id": "combination-2",
+      "stream": "Science",
+      "number": 2,
+      "subjects": [
+        "English",
+        "Physics",
+        "Chemistry",
+        "Introductory Computer Science (Python)",
+        "Mathematics"
+      ],
+      "ambiguous": false
+    },
+    {
+      "raw": "English, Physics, Chemistry, Biology, Hindi",
+      "source": {
+        "file": "SUBJECT COMBINATIONS OFFERED IN SENIOR SECONDARY.pdf",
+        "page": 1
+      },
+      "id": "combination-3",
+      "stream": "Science",
+      "number": 3,
+      "subjects": [
+        "English",
+        "Physics",
+        "Chemistry",
+        "Biology",
+        "Hindi"
+      ],
+      "ambiguous": false
+    },
+    {
+      "raw": "English, Physics, Chemistry, Biology, Sanskrit",
+      "source": {
+        "file": "SUBJECT COMBINATIONS OFFERED IN SENIOR SECONDARY.pdf",
+        "page": 1
+      },
+      "id": "combination-4",
+      "stream": "Science",
+      "number": 4,
+      "subjects": [
+        "English",
+        "Physics",
+        "Chemistry",
+        "Biology",
+        "Sanskrit"
+      ],
+      "ambiguous": false
+    },
+    {
+      "raw": "English, Physics, Chemistry, Biology, Malayalam",
+      "source": {
+        "file": "SUBJECT COMBINATIONS OFFERED IN SENIOR SECONDARY.pdf",
+        "page": 1
+      },
+      "id": "combination-5",
+      "stream": "Science",
+      "number": 5,
+      "subjects": [
+        "English",
+        "Physics",
+        "Chemistry",
+        "Biology",
+        "Malayalam"
+      ],
+      "ambiguous": false
+    },
+    {
+      "raw": "English, Physics, Chemistry, Biology, Informatics Practices",
+      "source": {
+        "file": "SUBJECT COMBINATIONS OFFERED IN SENIOR SECONDARY.pdf",
+        "page": 1
+      },
+      "id": "combination-6",
+      "stream": "Science",
+      "number": 6,
+      "subjects": [
+        "English",
+        "Physics",
+        "Chemistry",
+        "Biology",
+        "Informatics Practices"
+      ],
+      "ambiguous": false
+    },
+    {
+      "raw": "English, Physics, Chemistry, Biology, Introductory Computer Science (Python)",
+      "source": {
+        "file": "SUBJECT COMBINATIONS OFFERED IN SENIOR SECONDARY.pdf",
+        "page": 1
+      },
+      "id": "combination-7",
+      "stream": "Science",
+      "number": 7,
+      "subjects": [
+        "English",
+        "Physics",
+        "Chemistry",
+        "Biology",
+        "Introductory Computer Science (Python)"
+      ],
+      "ambiguous": false
+    },
+    {
+      "raw": "English, Physics, Chemistry, Biology, Physical Education",
+      "source": {
+        "file": "SUBJECT COMBINATIONS OFFERED IN SENIOR SECONDARY.pdf",
+        "page": 2
+      },
+      "id": "combination-8",
+      "stream": "Science",
+      "number": 8,
+      "subjects": [
+        "English",
+        "Physics",
+        "Chemistry",
+        "Biology",
+        "Physical Education"
+      ],
+      "ambiguous": false
+    },
+    {
+      "raw": "English, Physics, Chemistry, Biology, Psychology",
+      "source": {
+        "file": "SUBJECT COMBINATIONS OFFERED IN SENIOR SECONDARY.pdf",
+        "page": 2
+      },
+      "id": "combination-9",
+      "stream": "Science",
+      "number": 9,
+      "subjects": [
+        "English",
+        "Physics",
+        "Chemistry",
+        "Biology",
+        "Psychology"
+      ],
+      "ambiguous": false
+    },
+    {
+      "raw": "English, Physics, Chemistry, Mathematics, Hindi",
+      "source": {
+        "file": "SUBJECT COMBINATIONS OFFERED IN SENIOR SECONDARY.pdf",
+        "page": 2
+      },
+      "id": "combination-10",
+      "stream": "Science",
+      "number": 10,
+      "subjects": [
+        "English",
+        "Physics",
+        "Chemistry",
+        "Mathematics",
+        "Hindi"
+      ],
+      "ambiguous": false
+    },
+    {
+      "raw": "English, Physics, Chemistry, Mathematics, Sanskrit",
+      "source": {
+        "file": "SUBJECT COMBINATIONS OFFERED IN SENIOR SECONDARY.pdf",
+        "page": 2
+      },
+      "id": "combination-11",
+      "stream": "Science",
+      "number": 11,
+      "subjects": [
+        "English",
+        "Physics",
+        "Chemistry",
+        "Mathematics",
+        "Sanskrit"
+      ],
+      "ambiguous": false
+    },
+    {
+      "raw": "English, Physics, Chemistry, Mathematics, Malayalam",
+      "source": {
+        "file": "SUBJECT COMBINATIONS OFFERED IN SENIOR SECONDARY.pdf",
+        "page": 2
+      },
+      "id": "combination-12",
+      "stream": "Science",
+      "number": 12,
+      "subjects": [
+        "English",
+        "Physics",
+        "Chemistry",
+        "Mathematics",
+        "Malayalam"
+      ],
+      "ambiguous": false
+    },
+    {
+      "raw": "English, Physics, Chemistry, Mathematics, Physical Education",
+      "source": {
+        "file": "SUBJECT COMBINATIONS OFFERED IN SENIOR SECONDARY.pdf",
+        "page": 2
+      },
+      "id": "combination-13",
+      "stream": "Science",
+      "number": 13,
+      "subjects": [
+        "English",
+        "Physics",
+        "Chemistry",
+        "Mathematics",
+        "Physical Education"
+      ],
+      "ambiguous": false
+    },
+    {
+      "raw": "English, Physics, Chemistry, Mathematics, Informatics Practices (Python)",
+      "source": {
+        "file": "SUBJECT COMBINATIONS OFFERED IN SENIOR SECONDARY.pdf",
+        "page": 2
+      },
+      "id": "combination-14",
+      "stream": "Science",
+      "number": 14,
+      "subjects": [
+        "English",
+        "Physics",
+        "Chemistry",
+        "Mathematics",
+        "Informatics Practices (Python)"
+      ],
+      "ambiguous": false
+    },
+    {
+      "raw": "English, Business Studies, Accountancy, Economics, Mathematics",
+      "source": {
+        "file": "SUBJECT COMBINATIONS OFFERED IN SENIOR SECONDARY.pdf",
+        "page": 2
+      },
+      "id": "combination-15",
+      "stream": "Commerce",
+      "number": 1,
+      "subjects": [
+        "English",
+        "Business Studies",
+        "Accountancy",
+        "Economics",
+        "Mathematics"
+      ],
+      "ambiguous": false
+    },
+    {
+      "raw": "English, Business Studies, Accountancy, Economics, Informatics Practices (Python)",
+      "source": {
+        "file": "SUBJECT COMBINATIONS OFFERED IN SENIOR SECONDARY.pdf",
+        "page": 2
+      },
+      "id": "combination-16",
+      "stream": "Commerce",
+      "number": 2,
+      "subjects": [
+        "English",
+        "Business Studies",
+        "Accountancy",
+        "Economics",
+        "Informatics Practices (Python)"
+      ],
+      "ambiguous": false
+    },
+    {
+      "raw": "English, Business Studies, Accountancy, Economics, Hindi",
+      "source": {
+        "file": "SUBJECT COMBINATIONS OFFERED IN SENIOR SECONDARY.pdf",
+        "page": 2
+      },
+      "id": "combination-17",
+      "stream": "Commerce",
+      "number": 3,
+      "subjects": [
+        "English",
+        "Business Studies",
+        "Accountancy",
+        "Economics",
+        "Hindi"
+      ],
+      "ambiguous": false
+    },
+    {
+      "raw": "English, Business Studies, Accountancy, Economics, Sanskrit",
+      "source": {
+        "file": "SUBJECT COMBINATIONS OFFERED IN SENIOR SECONDARY.pdf",
+        "page": 2
+      },
+      "id": "combination-18",
+      "stream": "Commerce",
+      "number": 4,
+      "subjects": [
+        "English",
+        "Business Studies",
+        "Accountancy",
+        "Economics",
+        "Sanskrit"
+      ],
+      "ambiguous": false
+    },
+    {
+      "raw": "English, Business Studies, Accountancy, Economics, Malayalam",
+      "source": {
+        "file": "SUBJECT COMBINATIONS OFFERED IN SENIOR SECONDARY.pdf",
+        "page": 2
+      },
+      "id": "combination-19",
+      "stream": "Commerce",
+      "number": 5,
+      "subjects": [
+        "English",
+        "Business Studies",
+        "Accountancy",
+        "Economics",
+        "Malayalam"
+      ],
+      "ambiguous": false
+    },
+    {
+      "raw": "English, Business Studies, Accountancy, Economics, Physical Education",
+      "source": {
+        "file": "SUBJECT COMBINATIONS OFFERED IN SENIOR SECONDARY.pdf",
+        "page": 2
+      },
+      "id": "combination-20",
+      "stream": "Commerce",
+      "number": 6,
+      "subjects": [
+        "English",
+        "Business Studies",
+        "Accountancy",
+        "Economics",
+        "Physical Education"
+      ],
+      "ambiguous": false
+    },
+    {
+      "raw": "English, History, Economics Psychology, Informatics Practices (Python)",
+      "source": {
+        "file": "SUBJECT COMBINATIONS OFFERED IN SENIOR SECONDARY.pdf",
+        "page": 2
+      },
+      "id": "combination-21",
+      "stream": "Humanities",
+      "number": 1,
+      "subjects": [
+        "English",
+        "History",
+        "Economics Psychology",
+        "Informatics Practices (Python)"
+      ],
+      "ambiguous": true
+    },
+    {
+      "raw": "English, History, Economics Psychology, Mathematics",
+      "source": {
+        "file": "SUBJECT COMBINATIONS OFFERED IN SENIOR SECONDARY.pdf",
+        "page": 2
+      },
+      "id": "combination-22",
+      "stream": "Humanities",
+      "number": 2,
+      "subjects": [
+        "English",
+        "History",
+        "Economics Psychology",
+        "Mathematics"
+      ],
+      "ambiguous": true
+    },
+    {
+      "raw": "English, History, Economics Psychology, Introductory Computer Science (Python)",
+      "source": {
+        "file": "SUBJECT COMBINATIONS OFFERED IN SENIOR SECONDARY.pdf",
+        "page": 2
+      },
+      "id": "combination-23",
+      "stream": "Humanities",
+      "number": 3,
+      "subjects": [
+        "English",
+        "History",
+        "Economics Psychology",
+        "Introductory Computer Science (Python)"
+      ],
+      "ambiguous": true
+    },
+    {
+      "raw": "English, History, Economics, Psychology, Hindi",
+      "source": {
+        "file": "SUBJECT COMBINATIONS OFFERED IN SENIOR SECONDARY.pdf",
+        "page": 2
+      },
+      "id": "combination-24",
+      "stream": "Humanities",
+      "number": 4,
+      "subjects": [
+        "English",
+        "History",
+        "Economics",
+        "Psychology",
+        "Hindi"
+      ],
+      "ambiguous": false
+    },
+    {
+      "raw": "English, History, Economics, Psychology, Sanskrit",
+      "source": {
+        "file": "SUBJECT COMBINATIONS OFFERED IN SENIOR SECONDARY.pdf",
+        "page": 2
+      },
+      "id": "combination-25",
+      "stream": "Humanities",
+      "number": 5,
+      "subjects": [
+        "English",
+        "History",
+        "Economics",
+        "Psychology",
+        "Sanskrit"
+      ],
+      "ambiguous": false
+    },
+    {
+      "raw": "English, History, Economics, Psychology, Malayalam",
+      "source": {
+        "file": "SUBJECT COMBINATIONS OFFERED IN SENIOR SECONDARY.pdf",
+        "page": 2
+      },
+      "id": "combination-26",
+      "stream": "Humanities",
+      "number": 6,
+      "subjects": [
+        "English",
+        "History",
+        "Economics",
+        "Psychology",
+        "Malayalam"
+      ],
+      "ambiguous": false
+    },
+    {
+      "raw": "English, History, Economics, Psychology, Physical Education",
+      "source": {
+        "file": "SUBJECT COMBINATIONS OFFERED IN SENIOR SECONDARY.pdf",
+        "page": 3
+      },
+      "id": "combination-27",
+      "stream": "Humanities",
+      "number": 7,
+      "subjects": [
+        "English",
+        "History",
+        "Economics",
+        "Psychology",
+        "Physical Education"
+      ],
+      "ambiguous": false
+    }
+  ],
+  "results": [
+    {
+      "id": "class-x-001",
+      "category": "class-x",
+      "year": "2024-2025",
+      "sourceYear": "2024-\n2025",
+      "name": "ATHIRA R KAMMATH",
+      "percentage": "99",
+      "source": {
+        "file": "RESULTS ARCHIVE.pdf",
+        "page": 1
+      }
+    },
+    {
+      "id": "class-x-002",
+      "category": "class-x",
+      "year": "2023-2024",
+      "sourceYear": "2023-\n2024",
+      "name": "ADHYA ASISH",
+      "percentage": "98.6",
+      "source": {
+        "file": "RESULTS ARCHIVE.pdf",
+        "page": 1
+      }
+    },
+    {
+      "id": "class-x-003",
+      "category": "class-x",
+      "year": "2022-2023",
+      "sourceYear": "2022-\n2023",
+      "name": "NEHA V SENAN",
+      "percentage": "97.4",
+      "source": {
+        "file": "RESULTS ARCHIVE.pdf",
+        "page": 1
+      }
+    },
+    {
+      "id": "class-x-004",
+      "category": "class-x",
+      "year": "2021-2022",
+      "sourceYear": "2021-\n2022",
+      "name": "ADITHYAN K",
+      "percentage": "98.8",
+      "source": {
+        "file": "RESULTS ARCHIVE.pdf",
+        "page": 1
+      }
+    },
+    {
+      "id": "class-x-005",
+      "category": "class-x",
+      "year": "2020-2021",
+      "sourceYear": "2020-\n2021",
+      "name": "HRIDWICK REMAN",
+      "percentage": "98.6",
+      "source": {
+        "file": "RESULTS ARCHIVE.pdf",
+        "page": 2
+      }
+    },
+    {
+      "id": "class-x-006",
+      "category": "class-x",
+      "year": "2019-2020",
+      "sourceYear": "2019-\n2020",
+      "name": "LYNN MARY JOSE",
+      "percentage": "98.6",
+      "source": {
+        "file": "RESULTS ARCHIVE.pdf",
+        "page": 2
+      }
+    },
+    {
+      "id": "class-x-007",
+      "category": "class-x",
+      "year": "2018-2019",
+      "sourceYear": "2018-\n2019",
+      "name": "ANAIKA AFSAL",
+      "percentage": "99.0",
+      "source": {
+        "file": "RESULTS ARCHIVE.pdf",
+        "page": 2
+      }
+    },
+    {
+      "id": "class-x-008",
+      "category": "class-x",
+      "year": "2018-2019",
+      "sourceYear": "2018-\n2019",
+      "name": "BHAMASREE B",
+      "percentage": "99.0",
+      "source": {
+        "file": "RESULTS ARCHIVE.pdf",
+        "page": 2
+      }
+    },
+    {
+      "id": "class-x-009",
+      "category": "class-x",
+      "year": "2017-2018",
+      "sourceYear": "2017-\n2018",
+      "name": "ANJU. K. N",
+      "percentage": "98.2",
+      "source": {
+        "file": "RESULTS ARCHIVE.pdf",
+        "page": 2
+      }
+    },
+    {
+      "id": "class-x-010",
+      "category": "class-x",
+      "year": "2008-2009",
+      "sourceYear": "2008-\n2009",
+      "name": "HARIPRIYA HARILAL",
+      "percentage": "97.2",
+      "source": {
+        "file": "RESULTS ARCHIVE.pdf",
+        "page": 2
+      }
+    },
+    {
+      "id": "class-x-011",
+      "category": "class-x",
+      "year": "2007-2008",
+      "sourceYear": "2007-\n2008",
+      "name": "V. P. S. RITWIKA",
+      "percentage": "96.4",
+      "source": {
+        "file": "RESULTS ARCHIVE.pdf",
+        "page": 2
+      }
+    },
+    {
+      "id": "class-x-012",
+      "category": "class-x",
+      "year": "2007-2008",
+      "sourceYear": "2007-\n2008",
+      "name": "KUNNATH BALAKRISHNAN RAHUL",
+      "percentage": "96.4",
+      "source": {
+        "file": "RESULTS ARCHIVE.pdf",
+        "page": 2
+      }
+    },
+    {
+      "id": "class-x-013",
+      "category": "class-x",
+      "year": "2006-2007",
+      "sourceYear": "2006-\n2007",
+      "name": "DAYA MADHUSOODANAN",
+      "percentage": "97.6",
+      "source": {
+        "file": "RESULTS ARCHIVE.pdf",
+        "page": 2
+      }
+    },
+    {
+      "id": "class-x-014",
+      "category": "class-x",
+      "year": "2005-2006",
+      "sourceYear": "2005-\n2006",
+      "name": "AMRUTHA. M.",
+      "percentage": "98.0",
+      "source": {
+        "file": "RESULTS ARCHIVE.pdf",
+        "page": 2
+      }
+    },
+    {
+      "id": "class-x-015",
+      "category": "class-x",
+      "year": "2004-2005",
+      "sourceYear": "2004-\n2005",
+      "name": "KUNNATH BALAKRISHNAN RESHMA",
+      "percentage": "95.8",
+      "source": {
+        "file": "RESULTS ARCHIVE.pdf",
+        "page": 2
+      }
+    },
+    {
+      "id": "class-x-016",
+      "category": "class-x",
+      "year": "2003-2004",
+      "sourceYear": "2003-\n2004",
+      "name": "SARITH MOHAN",
+      "percentage": "95.6",
+      "source": {
+        "file": "RESULTS ARCHIVE.pdf",
+        "page": 2
+      }
+    },
+    {
+      "id": "class-x-017",
+      "category": "class-x",
+      "year": "2002-2003",
+      "sourceYear": "2002-\n2003",
+      "name": "NEETHI. K. S.",
+      "percentage": "96.0",
+      "source": {
+        "file": "RESULTS ARCHIVE.pdf",
+        "page": 2
+      }
+    },
+    {
+      "id": "class-x-018",
+      "category": "class-x",
+      "year": "2001-2002",
+      "sourceYear": "2001-\n2002",
+      "name": "REVATHY. S.",
+      "percentage": "93.4",
+      "source": {
+        "file": "RESULTS ARCHIVE.pdf",
+        "page": 3
+      }
+    },
+    {
+      "id": "class-x-019",
+      "category": "class-x",
+      "year": "2000-2001",
+      "sourceYear": "2000-\n2001",
+      "name": "REKHA KUMAR KALLATE",
+      "percentage": "93.8",
+      "source": {
+        "file": "RESULTS ARCHIVE.pdf",
+        "page": 3
+      }
+    },
+    {
+      "id": "class-x-020",
+      "category": "class-x",
+      "year": "1999-2000",
+      "sourceYear": "1999-\n2000",
+      "name": "PRIYA CHANDRAN",
+      "percentage": "96.2",
+      "source": {
+        "file": "RESULTS ARCHIVE.pdf",
+        "page": 3
+      }
+    },
+    {
+      "id": "class-x-021",
+      "category": "class-x",
+      "year": "1998-1999",
+      "sourceYear": "1998-\n1999",
+      "name": "MRIDULA. N.",
+      "percentage": "92.2",
+      "source": {
+        "file": "RESULTS ARCHIVE.pdf",
+        "page": 3
+      }
+    },
+    {
+      "id": "class-x-022",
+      "category": "class-x",
+      "year": "1998-1999",
+      "sourceYear": "1998-\n1999",
+      "name": "DILEEP CHANDRAN. T.",
+      "percentage": "92.2",
+      "source": {
+        "file": "RESULTS ARCHIVE.pdf",
+        "page": 3
+      }
+    },
+    {
+      "id": "class-x-023",
+      "category": "class-x",
+      "year": "1997-1998",
+      "sourceYear": "1997-\n1998",
+      "name": "PARVATHY. G.",
+      "percentage": "95.2",
+      "source": {
+        "file": "RESULTS ARCHIVE.pdf",
+        "page": 3
+      }
+    },
+    {
+      "id": "class-x-024",
+      "category": "class-x",
+      "year": "1996-1997",
+      "sourceYear": "1996-\n1997",
+      "name": "JIDESH HARIDAS",
+      "percentage": "88.8",
+      "source": {
+        "file": "RESULTS ARCHIVE.pdf",
+        "page": 3
+      }
+    },
+    {
+      "id": "class-x-025",
+      "category": "class-x",
+      "year": "1996-1997",
+      "sourceYear": "1996-\n1997",
+      "name": "POORNIMA. Y.",
+      "percentage": "88.8",
+      "source": {
+        "file": "RESULTS ARCHIVE.pdf",
+        "page": 3
+      }
+    },
+    {
+      "id": "class-x-026",
+      "category": "class-x",
+      "year": "1995-1996",
+      "sourceYear": "1995-\n1996",
+      "name": "VARSHA RADHAKRISHNAN",
+      "percentage": "92.2",
+      "source": {
+        "file": "RESULTS ARCHIVE.pdf",
+        "page": 3
+      }
+    },
+    {
+      "id": "class-x-027",
+      "category": "class-x",
+      "year": "1994-1995",
+      "sourceYear": "1994-\n1995",
+      "name": "VINOD MENON",
+      "percentage": "90.8",
+      "source": {
+        "file": "RESULTS ARCHIVE.pdf",
+        "page": 3
+      }
+    },
+    {
+      "id": "class-x-028",
+      "category": "class-x",
+      "year": "1993-1994",
+      "sourceYear": "1993-\n1994",
+      "name": "POOJA",
+      "percentage": "88.6",
+      "source": {
+        "file": "RESULTS ARCHIVE.pdf",
+        "page": 3
+      }
+    },
+    {
+      "id": "class-x-029",
+      "category": "class-x",
+      "year": "1992-1993",
+      "sourceYear": "1992-\n1993",
+      "name": "SHIRAS. P. R.",
+      "percentage": "89.2",
+      "source": {
+        "file": "RESULTS ARCHIVE.pdf",
+        "page": 3
+      }
+    },
+    {
+      "id": "class-x-030",
+      "category": "class-x",
+      "year": "1991-1992",
+      "sourceYear": "1991-\n1992",
+      "name": "RINI RAVEENDRAN",
+      "percentage": "89.0",
+      "source": {
+        "file": "RESULTS ARCHIVE.pdf",
+        "page": 3
+      }
+    },
+    {
+      "id": "class-x-031",
+      "category": "class-x",
+      "year": "1990-1991",
+      "sourceYear": "1990-\n1991",
+      "name": "MILI RAVEENDRAN",
+      "percentage": "90.8",
+      "source": {
+        "file": "RESULTS ARCHIVE.pdf",
+        "page": 3
+      }
+    },
+    {
+      "id": "science-032",
+      "category": "science",
+      "year": "2023-2024",
+      "sourceYear": "2023-2024",
+      "name": "SIDHARTH PRADEEP",
+      "percentage": "96.6",
+      "source": {
+        "file": "RESULTS ARCHIVE.pdf",
+        "page": 4
+      }
+    },
+    {
+      "id": "science-033",
+      "category": "science",
+      "year": "2023-2024",
+      "sourceYear": "2023-2024",
+      "name": "SIDHARTH V JAIN",
+      "percentage": "97.4",
+      "source": {
+        "file": "RESULTS ARCHIVE.pdf",
+        "page": 4
+      }
+    },
+    {
+      "id": "science-034",
+      "category": "science",
+      "year": "2022-2023",
+      "sourceYear": "2022-2023",
+      "name": "HRIDWICK REMAN",
+      "percentage": "97.2",
+      "source": {
+        "file": "RESULTS ARCHIVE.pdf",
+        "page": 4
+      }
+    },
+    {
+      "id": "science-035",
+      "category": "science",
+      "year": "2021-2022",
+      "sourceYear": "2021-2022",
+      "name": "GANGA SAJEEVKUMAR",
+      "percentage": "99.4",
+      "source": {
+        "file": "RESULTS ARCHIVE.pdf",
+        "page": 4
+      }
+    },
+    {
+      "id": "science-036",
+      "category": "science",
+      "year": "2020-2021",
+      "sourceYear": "2020-2021",
+      "name": "ABHIJITH KRISHNANUNNI",
+      "percentage": "98.2",
+      "source": {
+        "file": "RESULTS ARCHIVE.pdf",
+        "page": 4
+      }
+    },
+    {
+      "id": "science-037",
+      "category": "science",
+      "year": "2019-2020",
+      "sourceYear": "2019-2020",
+      "name": "ROHIT VISWANATHAN",
+      "percentage": "97.2",
+      "source": {
+        "file": "RESULTS ARCHIVE.pdf",
+        "page": 4
+      }
+    },
+    {
+      "id": "science-038",
+      "category": "science",
+      "year": "2018-2019",
+      "sourceYear": "2018-2019",
+      "name": "ELZA ROSE",
+      "percentage": "96.2",
+      "source": {
+        "file": "RESULTS ARCHIVE.pdf",
+        "page": 4
+      }
+    },
+    {
+      "id": "science-039",
+      "category": "science",
+      "year": "2017-2018",
+      "sourceYear": "2017-2018",
+      "name": "ANANTHAKRISHNAN V",
+      "percentage": "97.4",
+      "source": {
+        "file": "RESULTS ARCHIVE.pdf",
+        "page": 4
+      }
+    },
+    {
+      "id": "science-040",
+      "category": "science",
+      "year": "2016-2017",
+      "sourceYear": "2016-2017",
+      "name": "SREE CHITHRA",
+      "percentage": "97.6",
+      "source": {
+        "file": "RESULTS ARCHIVE.pdf",
+        "page": 4
+      }
+    },
+    {
+      "id": "science-041",
+      "category": "science",
+      "year": "2015-2016",
+      "sourceYear": "2015-2016",
+      "name": "ARDRA AYYAPPATH",
+      "percentage": "96.6",
+      "source": {
+        "file": "RESULTS ARCHIVE.pdf",
+        "page": 4
+      }
+    },
+    {
+      "id": "science-042",
+      "category": "science",
+      "year": "2014-2015",
+      "sourceYear": "2014-2015",
+      "name": "NIHAL. V. P.",
+      "percentage": "97.0",
+      "source": {
+        "file": "RESULTS ARCHIVE.pdf",
+        "page": 4
+      }
+    },
+    {
+      "id": "science-043",
+      "category": "science",
+      "year": "2013-2014",
+      "sourceYear": "2013-2014",
+      "name": "HARITH. R.",
+      "percentage": "97.4",
+      "source": {
+        "file": "RESULTS ARCHIVE.pdf",
+        "page": 4
+      }
+    },
+    {
+      "id": "science-044",
+      "category": "science",
+      "year": "2012-2013",
+      "sourceYear": "2012-2013",
+      "name": "DIVYA KRISHNAN",
+      "percentage": "97.4",
+      "source": {
+        "file": "RESULTS ARCHIVE.pdf",
+        "page": 4
+      }
+    },
+    {
+      "id": "science-045",
+      "category": "science",
+      "year": "2011-2012",
+      "sourceYear": "2011-2012",
+      "name": "MARIA POJI MENACHERRY",
+      "percentage": "96.2",
+      "source": {
+        "file": "RESULTS ARCHIVE.pdf",
+        "page": 4
+      }
+    },
+    {
+      "id": "science-046",
+      "category": "science",
+      "year": "2010-2011",
+      "sourceYear": "2010- 2011",
+      "name": "HARIPRIYA HARILAL.",
+      "percentage": "96.4",
+      "source": {
+        "file": "RESULTS ARCHIVE.pdf",
+        "page": 4
+      }
+    },
+    {
+      "id": "science-047",
+      "category": "science",
+      "year": "2009-2010",
+      "sourceYear": "2009-2010",
+      "name": "KEERTHI SAGAR",
+      "percentage": "96.2",
+      "source": {
+        "file": "RESULTS ARCHIVE.pdf",
+        "page": 4
+      }
+    },
+    {
+      "id": "science-048",
+      "category": "science",
+      "year": "2009-2010",
+      "sourceYear": "2009-2010",
+      "name": "RITWIKA",
+      "percentage": "96.2",
+      "source": {
+        "file": "RESULTS ARCHIVE.pdf",
+        "page": 4
+      }
+    },
+    {
+      "id": "science-049",
+      "category": "science",
+      "year": "2008-2009",
+      "sourceYear": "2008-2009",
+      "name": "SHRUTHI. R.",
+      "percentage": "96.0",
+      "source": {
+        "file": "RESULTS ARCHIVE.pdf",
+        "page": 4
+      }
+    },
+    {
+      "id": "science-050",
+      "category": "science",
+      "year": "2007-2008",
+      "sourceYear": "2007-2008",
+      "name": "RAHUL SATHYANATH",
+      "percentage": "93.8",
+      "source": {
+        "file": "RESULTS ARCHIVE.pdf",
+        "page": 4
+      }
+    },
+    {
+      "id": "science-051",
+      "category": "science",
+      "year": "2006-2007",
+      "sourceYear": "2006-2007",
+      "name": "AKHIL. K .BALACHANDRAN",
+      "percentage": "94.6",
+      "source": {
+        "file": "RESULTS ARCHIVE.pdf",
+        "page": 5
+      }
+    },
+    {
+      "id": "science-052",
+      "category": "science",
+      "year": "2005-2006",
+      "sourceYear": "2005-2006",
+      "name": "MIDHUN. S.",
+      "percentage": "94.4",
+      "source": {
+        "file": "RESULTS ARCHIVE.pdf",
+        "page": 5
+      }
+    },
+    {
+      "id": "science-053",
+      "category": "science",
+      "year": "2004-2005",
+      "sourceYear": "2004-2005",
+      "name": "SREEJITH RAMACHANDRAN",
+      "percentage": "95.4",
+      "source": {
+        "file": "RESULTS ARCHIVE.pdf",
+        "page": 5
+      }
+    },
+    {
+      "id": "science-054",
+      "category": "science",
+      "year": "2003-2004",
+      "sourceYear": "2003-2004",
+      "name": "ANAMIKA RADHAKRISHNAN",
+      "percentage": "90.4",
+      "source": {
+        "file": "RESULTS ARCHIVE.pdf",
+        "page": 5
+      }
+    },
+    {
+      "id": "science-055",
+      "category": "science",
+      "year": "2002-2003",
+      "sourceYear": "2002-2003",
+      "name": "JITHIN BENJAMIN",
+      "percentage": "89.0",
+      "source": {
+        "file": "RESULTS ARCHIVE.pdf",
+        "page": 5
+      }
+    },
+    {
+      "id": "science-056",
+      "category": "science",
+      "year": "2001-2002",
+      "sourceYear": "2001-2002",
+      "name": "RON JOHNY",
+      "percentage": "94.2",
+      "source": {
+        "file": "RESULTS ARCHIVE.pdf",
+        "page": 5
+      }
+    },
+    {
+      "id": "science-057",
+      "category": "science",
+      "year": "2000-2001",
+      "sourceYear": "2000-2001",
+      "name": "RAJESH. R. CHANDRAN",
+      "percentage": "93.0",
+      "source": {
+        "file": "RESULTS ARCHIVE.pdf",
+        "page": 5
+      }
+    },
+    {
+      "id": "science-058",
+      "category": "science",
+      "year": "1999-2000",
+      "sourceYear": "1999-2000",
+      "name": "AMRITHA. P.",
+      "percentage": "95.2",
+      "source": {
+        "file": "RESULTS ARCHIVE.pdf",
+        "page": 5
+      }
+    },
+    {
+      "id": "science-059",
+      "category": "science",
+      "year": "1998-1999",
+      "sourceYear": "1998-1999",
+      "name": "SUBITH. V. S.",
+      "percentage": "90.6",
+      "source": {
+        "file": "RESULTS ARCHIVE.pdf",
+        "page": 5
+      }
+    },
+    {
+      "id": "science-060",
+      "category": "science",
+      "year": "1997-1998",
+      "sourceYear": "1997-1998",
+      "name": "SONIYA. T. N",
+      "percentage": "90.0",
+      "source": {
+        "file": "RESULTS ARCHIVE.pdf",
+        "page": 5
+      }
+    },
+    {
+      "id": "science-061",
+      "category": "science",
+      "year": "1996-1997",
+      "sourceYear": "1996-1997",
+      "name": "KISHOR CHALAKKAL. V.",
+      "percentage": "84.4",
+      "source": {
+        "file": "RESULTS ARCHIVE.pdf",
+        "page": 5
+      }
+    },
+    {
+      "id": "science-062",
+      "category": "science",
+      "year": "1995-1996",
+      "sourceYear": "1995-1996",
+      "name": "SREERANJINI MENON",
+      "percentage": "87.0",
+      "source": {
+        "file": "RESULTS ARCHIVE.pdf",
+        "page": 5
+      }
+    },
+    {
+      "id": "science-063",
+      "category": "science",
+      "year": "1994-1995",
+      "sourceYear": "1994-1995",
+      "name": "VINITH PAULSON",
+      "percentage": "83.2",
+      "source": {
+        "file": "RESULTS ARCHIVE.pdf",
+        "page": 5
+      }
+    },
+    {
+      "id": "science-064",
+      "category": "science",
+      "year": "1993-1994",
+      "sourceYear": "1993-1994",
+      "name": "SHANKER. B.",
+      "percentage": "86.6",
+      "source": {
+        "file": "RESULTS ARCHIVE.pdf",
+        "page": 5
+      }
+    },
+    {
+      "id": "science-065",
+      "category": "science",
+      "year": "1992-1993",
+      "sourceYear": "1992-1993",
+      "name": "RADHIKA. K.",
+      "percentage": "88.8",
+      "source": {
+        "file": "RESULTS ARCHIVE.pdf",
+        "page": 5
+      }
+    },
+    {
+      "id": "commerce-066",
+      "category": "commerce",
+      "year": "2024-2025",
+      "sourceYear": "2024-2025",
+      "name": "ADHITHYA KRISHNA",
+      "percentage": "98",
+      "source": {
+        "file": "RESULTS ARCHIVE.pdf",
+        "page": 5
+      }
+    },
+    {
+      "id": "commerce-067",
+      "category": "commerce",
+      "year": "2023-2024",
+      "sourceYear": "2023-2024",
+      "name": "A K NANJARI",
+      "percentage": "99.2",
+      "source": {
+        "file": "RESULTS ARCHIVE.pdf",
+        "page": 5
+      }
+    },
+    {
+      "id": "commerce-068",
+      "category": "commerce",
+      "year": "2022-2023",
+      "sourceYear": "2022-2023",
+      "name": "S MANU MAHADEVAN",
+      "percentage": "96.6",
+      "source": {
+        "file": "RESULTS ARCHIVE.pdf",
+        "page": 5
+      }
+    },
+    {
+      "id": "commerce-069",
+      "category": "commerce",
+      "year": "2021-2022",
+      "sourceYear": "2021-2022",
+      "name": "SOURAV R",
+      "percentage": "97.0",
+      "source": {
+        "file": "RESULTS ARCHIVE.pdf",
+        "page": 6
+      }
+    },
+    {
+      "id": "commerce-070",
+      "category": "commerce",
+      "year": "2020-2021",
+      "sourceYear": "2020-2021",
+      "name": "ANANTHU SUJIL",
+      "percentage": "98.2",
+      "source": {
+        "file": "RESULTS ARCHIVE.pdf",
+        "page": 6
+      }
+    },
+    {
+      "id": "commerce-071",
+      "category": "commerce",
+      "year": "2019-2020",
+      "sourceYear": "2019-2020",
+      "name": "ATHIRA P JAYASANKAR",
+      "percentage": "96.8",
+      "source": {
+        "file": "RESULTS ARCHIVE.pdf",
+        "page": 6
+      }
+    },
+    {
+      "id": "commerce-072",
+      "category": "commerce",
+      "year": "2018-2019",
+      "sourceYear": "2018-2019",
+      "name": "GADHA S UDAYAN",
+      "percentage": "95.8",
+      "source": {
+        "file": "RESULTS ARCHIVE.pdf",
+        "page": 6
+      }
+    },
+    {
+      "id": "commerce-073",
+      "category": "commerce",
+      "year": "2017-2018",
+      "sourceYear": "2017-2018",
+      "name": "PARVATHI MOHAN",
+      "percentage": "94.4",
+      "source": {
+        "file": "RESULTS ARCHIVE.pdf",
+        "page": 6
+      }
+    },
+    {
+      "id": "commerce-074",
+      "category": "commerce",
+      "year": "2017-2018",
+      "sourceYear": "2017-2018",
+      "name": "V POORNIMA",
+      "percentage": "94.4",
+      "source": {
+        "file": "RESULTS ARCHIVE.pdf",
+        "page": 6
+      }
+    },
+    {
+      "id": "commerce-075",
+      "category": "commerce",
+      "year": "2016-2017",
+      "sourceYear": "2016-2017",
+      "name": "ANAGHA NANDAKUMARAN",
+      "percentage": "94.8",
+      "source": {
+        "file": "RESULTS ARCHIVE.pdf",
+        "page": 6
+      }
+    },
+    {
+      "id": "commerce-076",
+      "category": "commerce",
+      "year": "2015-2016",
+      "sourceYear": "2015-2016",
+      "name": "SUDHA K",
+      "percentage": "92.0",
+      "source": {
+        "file": "RESULTS ARCHIVE.pdf",
+        "page": 6
+      }
+    },
+    {
+      "id": "commerce-077",
+      "category": "commerce",
+      "year": "2014-2015",
+      "sourceYear": "2014-2015",
+      "name": "DEVIKA. C. A.",
+      "percentage": "96.2",
+      "source": {
+        "file": "RESULTS ARCHIVE.pdf",
+        "page": 6
+      }
+    },
+    {
+      "id": "commerce-078",
+      "category": "commerce",
+      "year": "2013-2014",
+      "sourceYear": "2013-\n2014",
+      "name": "ARAVIND VAIDYANATHAN",
+      "percentage": "95.4",
+      "source": {
+        "file": "RESULTS ARCHIVE.pdf",
+        "page": 6
+      }
+    },
+    {
+      "id": "commerce-079",
+      "category": "commerce",
+      "year": "2012-2013",
+      "sourceYear": "2012-2013",
+      "name": "KEDARAM. V. R.",
+      "percentage": "95.0",
+      "source": {
+        "file": "RESULTS ARCHIVE.pdf",
+        "page": 6
+      }
+    },
+    {
+      "id": "commerce-080",
+      "category": "commerce",
+      "year": "2011-2012",
+      "sourceYear": "2011-2012",
+      "name": "ABHISHEK RADHAKRISHNAN MOOSAD",
+      "percentage": "93.8",
+      "source": {
+        "file": "RESULTS ARCHIVE.pdf",
+        "page": 6
+      }
+    },
+    {
+      "id": "commerce-081",
+      "category": "commerce",
+      "year": "2010-2011",
+      "sourceYear": "2010-2011",
+      "name": "VARSHA VENUGOPAL",
+      "percentage": "94.8",
+      "source": {
+        "file": "RESULTS ARCHIVE.pdf",
+        "page": 6
+      }
+    },
+    {
+      "id": "commerce-082",
+      "category": "commerce",
+      "year": "2009-2010",
+      "sourceYear": "2009-2010",
+      "name": "NAIR NEERAJ RADHAKRISHNAN",
+      "percentage": "92.6",
+      "source": {
+        "file": "RESULTS ARCHIVE.pdf",
+        "page": 6
+      }
+    },
+    {
+      "id": "commerce-083",
+      "category": "commerce",
+      "year": "2008-2009",
+      "sourceYear": "2008-2009",
+      "name": "PRIYANKA. M. G.",
+      "percentage": "95.8",
+      "source": {
+        "file": "RESULTS ARCHIVE.pdf",
+        "page": 6
+      }
+    },
+    {
+      "id": "commerce-084",
+      "category": "commerce",
+      "year": "2007-2008",
+      "sourceYear": "2007-2008",
+      "name": "SREENATH. M. S.",
+      "percentage": "92.0",
+      "source": {
+        "file": "RESULTS ARCHIVE.pdf",
+        "page": 6
+      }
+    },
+    {
+      "id": "commerce-085",
+      "category": "commerce",
+      "year": "2006-2007",
+      "sourceYear": "2006-2007",
+      "name": "NEETHU NAIR. K.",
+      "percentage": "89.8",
+      "source": {
+        "file": "RESULTS ARCHIVE.pdf",
+        "page": 6
+      }
+    },
+    {
+      "id": "commerce-086",
+      "category": "commerce",
+      "year": "2005-2006",
+      "sourceYear": "2005-2006",
+      "name": "LAKSHMI NARENDRAN",
+      "percentage": "90.8",
+      "source": {
+        "file": "RESULTS ARCHIVE.pdf",
+        "page": 6
+      }
+    },
+    {
+      "id": "commerce-087",
+      "category": "commerce",
+      "year": "2004-2005",
+      "sourceYear": "2004-2005",
+      "name": "PARVATHY DEVI MENON",
+      "percentage": "93.6",
+      "source": {
+        "file": "RESULTS ARCHIVE.pdf",
+        "page": 6
+      }
+    },
+    {
+      "id": "commerce-088",
+      "category": "commerce",
+      "year": "2003-2004",
+      "sourceYear": "2003-2004",
+      "name": "MANJU. P. M.",
+      "percentage": "84.0",
+      "source": {
+        "file": "RESULTS ARCHIVE.pdf",
+        "page": 6
+      }
+    },
+    {
+      "id": "commerce-089",
+      "category": "commerce",
+      "year": "2002-2003",
+      "sourceYear": "2002-2003",
+      "name": "RAJITHA. K. V.",
+      "percentage": "89.6",
+      "source": {
+        "file": "RESULTS ARCHIVE.pdf",
+        "page": 6
+      }
+    },
+    {
+      "id": "commerce-090",
+      "category": "commerce",
+      "year": "2001-2002",
+      "sourceYear": "2001-2002",
+      "name": "JAMSILA. P. J.",
+      "percentage": "88.4",
+      "source": {
+        "file": "RESULTS ARCHIVE.pdf",
+        "page": 7
+      }
+    },
+    {
+      "id": "commerce-091",
+      "category": "commerce",
+      "year": "2000-2001",
+      "sourceYear": "2000-2001",
+      "name": "JIJITHA. K. V.",
+      "percentage": "87.2",
+      "source": {
+        "file": "RESULTS ARCHIVE.pdf",
+        "page": 7
+      }
+    },
+    {
+      "id": "commerce-092",
+      "category": "commerce",
+      "year": "1999-2000",
+      "sourceYear": "1999-2000",
+      "name": "SWETHA BABU",
+      "percentage": "88.2",
+      "source": {
+        "file": "RESULTS ARCHIVE.pdf",
+        "page": 7
+      }
+    },
+    {
+      "id": "commerce-093",
+      "category": "commerce",
+      "year": "1998-1999",
+      "sourceYear": "1998-1999",
+      "name": "JAYADEEP MENON",
+      "percentage": "78.8",
+      "source": {
+        "file": "RESULTS ARCHIVE.pdf",
+        "page": 7
+      }
+    },
+    {
+      "id": "humanities-094",
+      "category": "humanities",
+      "year": "2024-2025",
+      "sourceYear": "2024-2025",
+      "name": "A B SREEVARDHAN",
+      "percentage": "95.4",
+      "source": {
+        "file": "RESULTS ARCHIVE.pdf",
+        "page": 7
+      }
+    },
+    {
+      "id": "humanities-095",
+      "category": "humanities",
+      "year": "2023-2024",
+      "sourceYear": "2023-2024",
+      "name": "ARCHITA SUDHEER IYER",
+      "percentage": "91.2",
+      "source": {
+        "file": "RESULTS ARCHIVE.pdf",
+        "page": 7
+      }
+    }
+  ],
+  "resources": [
+    {
+      "id": "paper-1",
+      "class": "12",
+      "stream": "",
+      "year": "2021-2022",
+      "title": "Class 12 question papers",
+      "kind": "folder",
+      "url": "https://drive.google.com/drive/folders/1CkovNPo3mR6jlbVHPW3FR_TuznvY8VZ-?usp=sharing",
+      "source": {
+        "file": "Previous Year Question Papers.pdf",
+        "page": 1,
+        "label": "View/Download\nSTD 12 : Question Paper 2021 - 2022",
+        "rect": [
+          131.25,
+          459.75,
+          482.25,
+          547.5
+        ]
+      },
+      "unavailable": false
+    },
+    {
+      "id": "paper-2",
+      "class": "12",
+      "stream": "Science",
+      "year": "2021-2022",
+      "title": "Class 12 Science question papers",
+      "kind": "document",
+      "url": "https://drive.google.com/file/d/1gMRVCuzNtDGHgh_nhWqVnFZog0aNT90d/view?usp=sharing",
+      "source": {
+        "file": "Previous Year Question Papers.pdf",
+        "page": 1,
+        "label": "View/Download\nSTD 12 Science",
+        "rect": [
+          131.25,
+          547.5,
+          482.25,
+          634.5
+        ]
+      },
+      "unavailable": true
+    },
+    {
+      "id": "paper-3",
+      "class": "12",
+      "stream": "Commerce",
+      "year": "2021-2022",
+      "title": "Class 12 Commerce question papers",
+      "kind": "document",
+      "url": "https://drive.google.com/file/d/16Mgnmv1PsK0mfkK2MKvSWU5itwUhCyXr/view?usp=sharing",
+      "source": {
+        "file": "Previous Year Question Papers.pdf",
+        "page": 1,
+        "label": "View/Download\nSTD 12 Commerce",
+        "rect": [
+          131.25,
+          634.5,
+          482.25,
+          721.5
+        ]
+      },
+      "unavailable": true
+    },
+    {
+      "id": "paper-4",
+      "class": "11",
+      "stream": "",
+      "year": "2021-2022",
+      "title": "Class 11 question papers",
+      "kind": "folder",
+      "url": "https://drive.google.com/drive/folders/1IiyJ9fEfLJiFJq78u8vAMeFPIBp_Cibj?usp=sharing",
+      "source": {
+        "file": "Previous Year Question Papers.pdf",
+        "page": 2,
+        "label": "View/Download\nSTD 11 : Question Paper 2021 - 2022",
+        "rect": [
+          131.25,
+          43.5,
+          482.25,
+          130.5
+        ]
+      },
+      "unavailable": false
+    },
+    {
+      "id": "paper-5",
+      "class": "11",
+      "stream": "Science",
+      "year": "2021-2022",
+      "title": "Class 11 Science question papers",
+      "kind": "document",
+      "url": "https://drive.google.com/file/d/1dF77pHLGyIB1NoT-NWsY2hrsypENnz0D/view?usp=sharing",
+      "source": {
+        "file": "Previous Year Question Papers.pdf",
+        "page": 2,
+        "label": "View/Download\nSTD 11 Science",
+        "rect": [
+          131.25,
+          130.5,
+          482.25,
+          218.25
+        ]
+      },
+      "unavailable": true
+    },
+    {
+      "id": "paper-6",
+      "class": "11",
+      "stream": "Commerce",
+      "year": "2021-2022",
+      "title": "Class 11 Commerce question papers",
+      "kind": "document",
+      "url": "https://drive.google.com/file/d/1-XEXq6vhvKAvLe9VKF00loGgAv5F-fwj/view?usp=sharing",
+      "source": {
+        "file": "Previous Year Question Papers.pdf",
+        "page": 2,
+        "label": "View/Download\nSTD 11 Commerce",
+        "rect": [
+          131.25,
+          218.25,
+          482.25,
+          305.25
+        ]
+      },
+      "unavailable": true
+    },
+    {
+      "id": "paper-7",
+      "class": "10",
+      "stream": "",
+      "year": "2021-2022",
+      "title": "Class 10 question papers",
+      "kind": "folder",
+      "url": "https://drive.google.com/drive/folders/1EhrUF_UVLKm-rrdYTUOR5r7iTXI9R0z4?usp=sharing",
+      "source": {
+        "file": "Previous Year Question Papers.pdf",
+        "page": 2,
+        "label": "View/Download\nSTD 10 : Question Paper 2021 - 2022",
+        "rect": [
+          131.25,
+          351.75,
+          482.25,
+          439.5
+        ]
+      },
+      "unavailable": false
+    },
+    {
+      "id": "paper-8",
+      "class": "10",
+      "stream": "",
+      "year": "2021-2022",
+      "title": "Class 10 question papers",
+      "kind": "document",
+      "url": "https://drive.google.com/file/d/1Wv1dzfeXxv9i66swvOt2vfP0wqG4xsTX/view?usp=sharing",
+      "source": {
+        "file": "Previous Year Question Papers.pdf",
+        "page": 2,
+        "label": "View/Download\nSTD 10",
+        "rect": [
+          131.25,
+          439.5,
+          482.25,
+          526.5
+        ]
+      },
+      "unavailable": true
+    },
+    {
+      "id": "paper-9",
+      "class": "9",
+      "stream": "",
+      "year": "2021-2022",
+      "title": "Class 9 question papers",
+      "kind": "folder",
+      "url": "https://drive.google.com/drive/folders/1GyNtaUazAlPIAjp5TyJE2m1pgsqBFJ-I?usp=sharing",
+      "source": {
+        "file": "Previous Year Question Papers.pdf",
+        "page": 2,
+        "label": "View/Download\nSTD 9 : Question Paper 2021 - 2022",
+        "rect": [
+          131.25,
+          573.0,
+          482.25,
+          660.0
+        ]
+      },
+      "unavailable": false
+    },
+    {
+      "id": "paper-10",
+      "class": "9",
+      "stream": "",
+      "year": "2021-2022",
+      "title": "Class 9 question papers",
+      "kind": "document",
+      "url": "https://drive.google.com/file/d/13MVj6mix9XDcQLVy8NT-yR37I7GPd58u/view?usp=sharing",
+      "source": {
+        "file": "Previous Year Question Papers.pdf",
+        "page": 2,
+        "label": "View/Download\nSTD 9",
+        "rect": [
+          131.25,
+          660.0,
+          482.25,
+          747.75
+        ]
+      },
+      "unavailable": true
+    },
+    {
+      "id": "paper-11",
+      "class": "8",
+      "stream": "",
+      "year": "2021-2022",
+      "title": "Class 8 question papers",
+      "kind": "folder",
+      "url": "https://drive.google.com/drive/folders/14a_JnjjCcw-sQkP1xDY6JWhZ2Jq0B-_V?usp=sharing",
+      "source": {
+        "file": "Previous Year Question Papers.pdf",
+        "page": 3,
+        "label": "View/Download\nSTD 8 : Question Paper 2021 - 2022",
+        "rect": [
+          131.25,
+          58.5,
+          482.25,
+          145.5
+        ]
+      },
+      "unavailable": false
+    },
+    {
+      "id": "paper-12",
+      "class": "8",
+      "stream": "",
+      "year": "2021-2022",
+      "title": "Class 8 question papers",
+      "kind": "document",
+      "url": "https://drive.google.com/file/d/1U7QzxeURIYL5ld4EATCI26A1CRux_rln/view?usp=sharing",
+      "source": {
+        "file": "Previous Year Question Papers.pdf",
+        "page": 3,
+        "label": "View/Download\nSTD 8",
+        "rect": [
+          131.25,
+          145.5,
+          482.25,
+          233.25
+        ]
+      },
+      "unavailable": false
+    },
+    {
+      "id": "paper-13",
+      "class": "7",
+      "stream": "",
+      "year": "2021-2022",
+      "title": "Class 7 question papers",
+      "kind": "folder",
+      "url": "https://drive.google.com/drive/folders/1W6CRZXpu_vQ0vVYBtYtKaNZNUrUfX0jj?usp=sharing",
+      "source": {
+        "file": "Previous Year Question Papers.pdf",
+        "page": 3,
+        "label": "View/Download\nSTD 7 : Question Paper 2021 - 2022",
+        "rect": [
+          131.25,
+          279.75,
+          482.25,
+          366.75
+        ]
+      },
+      "unavailable": false
+    },
+    {
+      "id": "paper-14",
+      "class": "7",
+      "stream": "",
+      "year": "2021-2022",
+      "title": "Class 7 question papers",
+      "kind": "document",
+      "url": "https://drive.google.com/file/d/1iKnSHPR79oU8de25yQPSiEK8lkj_WUsl/view?usp=sharing",
+      "source": {
+        "file": "Previous Year Question Papers.pdf",
+        "page": 3,
+        "label": "View/Download\nSTD 7",
+        "rect": [
+          131.25,
+          366.75,
+          482.25,
+          453.75
+        ]
+      },
+      "unavailable": false
+    },
+    {
+      "id": "paper-15",
+      "class": "6",
+      "stream": "",
+      "year": "2021-2022",
+      "title": "Class 6 question papers",
+      "kind": "folder",
+      "url": "https://drive.google.com/drive/folders/16Fd8_pNW7xgF67SYhmadlwEM3XiBiwDe?usp=sharing",
+      "source": {
+        "file": "Previous Year Question Papers.pdf",
+        "page": 3,
+        "label": "View/Download\nSTD 6 : Question Paper 2021 - 2022",
+        "rect": [
+          131.25,
+          500.25,
+          482.25,
+          588.0
+        ]
+      },
+      "unavailable": false
+    },
+    {
+      "id": "paper-16",
+      "class": "6",
+      "stream": "",
+      "year": "2021-2022",
+      "title": "Class 6 question papers",
+      "kind": "document",
+      "url": "https://drive.google.com/file/d/1REDUmSnn1sUvyci3Tu1fRgfPYfTkSB3I/view?usp=sharing",
+      "source": {
+        "file": "Previous Year Question Papers.pdf",
+        "page": 3,
+        "label": "View/Download\nSTD 6",
+        "rect": [
+          131.25,
+          588.0,
+          482.25,
+          675.0
+        ]
+      },
+      "unavailable": false
+    }
+  ],
+  "assessmentOriginal": [
+    "CBSE has introduced a new scheme to bring the uniformity in the system of assessment and examination for classes IX and X in all CBSE affiliated schools. To increase the confidence in the students to start preparing for class X Board examination when they join the Upper Primary stage in class VI, the CBSE has decided to implement the uniform system of assessment, examination pattern and issue of report cards for classes VI to VIII also in the similar pattern. The scheme for classes VI- VIII has been designed on Term Assessment basis with gradual increase in the learning assessment as the student move forward. The assessment and examination for classes VI to VIII comprises of two terms . i.e Term 1 and Term 2. The evaluation pattern for class IX will be similar to that of class X with a single term. The assessment structure comprises of two areas",
+    "Scholastic Area: - This includes three Periodic tests, Half Yearly Examination (for VI-VIII), Annual Examination, Note Book Submission and Subject Enrichment Activities. Co Scholastic Area: - For the holistic development of the student, cocurricular activities will be graded in Work Education, Art Education, Health & Physical Education. In addition to the above, the students will also be assessed for Discipline which will be based on the factors like attendance, sincerity, behavior, values, tidiness, respectfulness for rules and regulations, attitude towards society, nation and others."
+  ],
+  "training": {
+    "title": "Training Programmes 2019-2020",
+    "url": "https://chinmayavidyalaya.org/assets/img/pdf/Teachers_Training_Programmes_2019-20.pdf#toolbar=0",
+    "source": {
+      "file": "TRAINING PROGRAMMES.pdf",
+      "page": 1
+    }
+  },
+  "curriculum": {
+    "stages": [
+      "Nursery",
+      "Primary",
+      "Middle",
+      "Secondary",
+      "Senior Secondary (+2)"
+    ],
+    "affiliation": "The Vidyalaya is affiliated to the Central Board of Secondary Education, New Delhi and the school prepares students for the All India Secondary School Examination and All India Senior School Certificate Examination.",
+    "pattern": "5+3+2+2 (10+2)",
+    "medium": "English",
+    "strength": "Total number of students of this Vidyalaya is approximately 2000, from LKG to Class VII each of them have 3 divisions. Class VIII to XII have 4 divisions each.",
+    "source": {
+      "file": "CURRICULUM.pdf",
+      "pages": [
+        1,
+        2
+      ]
+    }
+  },
+  "historicalNote": "From 2009 onwards Continuous Comprehensive Evaluation (CCE) and Grading System introduced by CBSE."
+}

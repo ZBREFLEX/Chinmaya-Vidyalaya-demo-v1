@@ -1,0 +1,40 @@
+.achievements-page { color: #526674; }
+.achievements-page [id] { scroll-margin-top: 150px; }
+.achievements-page :is(h1,h2,h3) { font-weight: 500; color: #143449; }
+.achievements-page .eyebrow { color: #14758d; font-size: .7rem; letter-spacing: .15em; text-transform: uppercase; font-weight: 650; }
+.achievements-page p { line-height: 1.8; }
+.achievement-opening { padding-block: 40px 52px; }
+.achievement-opening h1 { font-size: clamp(2.6rem,4.6vw,4.5rem); line-height: 1.12; letter-spacing: -.035em; margin-block: 20px 26px; }
+.achievement-opening h1 em { font-family: Georgia,serif; font-weight: 400; color: #14758d; }
+.achievement-opening__bottom { display: flex; justify-content: space-between; gap: 35px; align-items: end; }
+.achievement-opening__bottom p { max-width: 590px; font-size: .95rem; margin: 0; }
+.achievement-opening__bottom a { flex-shrink: 0; }
+.recognition-featured { padding-block: 40px 65px; border-top: 1px solid #d7e5eb; }
+.recognition-section-title { margin-bottom: 30px; }
+.recognition-section-title h2 { font-size: clamp(2rem,3.2vw,2.8rem); line-height: 1.2; margin-block: 10px 16px; }
+.recognition-section-title > p:last-child { max-width: 660px; font-size: .92rem; }
+.recognition-featured__grid, .recognition-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 30px; }
+.recognition-featured__grid article { min-width: 0; }
+.recognition-image { display: flex; align-items: center; justify-content: center; aspect-ratio: 1.5; overflow: hidden; background: #eaf1f3; border-radius: 4px; }
+.recognition-image img { width: 100%; height: 100%; object-fit: cover; transition: transform .25s ease; }
+.recognition-image--poster { aspect-ratio: 1.05; padding: 16px; background: #eaf0f2; }
+.recognition-image--poster img { object-fit: contain; }
+.recognition-image:not(.recognition-image--poster):hover img, article:focus-within > .recognition-image:not(.recognition-image--poster) img { transform: scale(1.025); }
+.recognition-featured h3, .recognition-card h3 { font-size: 1.35rem; line-height: 1.35; margin: 10px 0 14px; overflow-wrap: anywhere; }
+.recognition-featured h3 a:hover, .recognition-card h3 a:hover { color: #14758d; }
+.recognition-featured article > p:not(.recognition-date) { font-size: .86rem; }
+.recognition-date { color: #526674; font-size: .73rem; margin-block: 19px 8px; }
+.recognition-browse { background: #f4f8fa; padding-block: 65px; }
+.recognition-grid { gap: 35px 28px; }
+.recognition-card { min-width: 0; background: white; border-bottom: 1px solid #c9dce4; }
+.recognition-card__copy { padding: 22px; }
+.recognition-category { color: #14758d; font-size: .64rem; text-transform: uppercase; letter-spacing: .07em; }
+.recognition-card .recognition-date { margin-block: 10px; }
+.recognition-excerpt { font-size: .85rem; }
+.recognition-card--text { border-top: 2px solid #92c5d5; }
+.recognition-archive-note { margin-top: 28px; font-size: .76rem; max-width: 760px; }
+.recognition-print-summary { display: none; }
+@media(max-width:1000px) { .recognition-grid { grid-template-columns: repeat(2,minmax(0,1fr)); } .recognition-featured__grid { gap: 20px; } .achievement-opening__bottom { align-items: start; flex-direction: column; gap: 16px; } }
+@media(max-width:700px) { .achievement-opening { padding-block: 25px 35px; } .achievement-opening h1 { font-size: clamp(2.4rem,8.6vw,3.6rem); } .recognition-featured { padding-block: 35px 45px; } .recognition-featured__grid,.recognition-grid { grid-template-columns: 1fr; gap: 35px; } .recognition-featured__grid article { display: grid; grid-template-columns: 1fr; } .recognition-featured__grid .recognition-image { aspect-ratio: 1.7; } .recognition-browse { padding-block: 45px; } .recognition-image--poster { aspect-ratio: 1; } .recognition-card__copy { padding: 22px; } }
+@media(prefers-reduced-motion:reduce) { .achievements-page * { animation: none !important; transition: none !important; } }
+@media print { .achievement-opening { padding-block: 15pt; } .achievement-opening h1 { font-size: 30pt; } .recognition-featured { padding-block: 15pt; } .recognition-featured__grid { gap: 15pt; } .recognition-featured h3 { font-size: 14pt; } .recognition-featured .life-text-link,.achievement-opening__bottom a,.recognition-browse .life-filters,.recognition-browse .life-results-bar,.recognition-grid,.recognition-browse .life-show-more,.recognition-browse .life-empty,.recognition-archive-note { display: none !important; } .recognition-print-summary { display: block; } body:has(.campus-reader[open]) .achievements-page { display: none !important; } }

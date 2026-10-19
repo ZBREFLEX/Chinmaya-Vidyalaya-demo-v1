@@ -40,7 +40,7 @@
 .nav-dropdown__content ul { list-style: none; padding: 0; margin: 0; }
 .nav-dropdown__item { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 12px; text-align: left; padding: 13px 10px; border: 0; border-radius: 8px; background: transparent; color: var(--color-heading); font-size: 13px; font-weight: 500; cursor: default; opacity: 1; }
 .nav-dropdown__item span { font-size: 9px; font-weight: 400; color: var(--color-text); white-space: nowrap; }
-.navbar__links a.nav-dropdown__item { font-size: 13px; font-weight: 500; cursor: pointer; }
+.navbar__links a.nav-dropdown__item { font-size: 13px; font-weight: 500; cursor: pointer; white-space: normal; line-height: 1.45; }
 .navbar__links a.nav-dropdown__item:hover { background: #eaf5fa; }
 .navbar__links .nav-dropdown__enquiry { display: flex; width: 100%; justify-content: space-between; margin-top: 12px; padding: 13px 10px; border: 0; border-top: 1px solid var(--color-border); background: transparent; color: var(--color-action); font-size: 12px; font-weight: 600; text-align: left; }
 .menu-toggle span { transition: transform .22s ease, opacity .22s ease; }
