@@ -1,3 +1,3 @@
 // Change the school's WhatsApp number here. Include the country code.
 // Spaces and a leading + are supported.
-export const whatsappNumber = '+91 8547193153';
+export const whatsappNumber = '+91 81119 72402';
