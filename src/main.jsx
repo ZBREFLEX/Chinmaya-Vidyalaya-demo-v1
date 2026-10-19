@@ -5,6 +5,7 @@ import { canonicalCampusUrl } from './content/campusNavigation';
 import './styles/variables.css';
 import './styles/global.css';
 import './styles/typography.css';
+import './styles/page-shapes.css';
 
 // Resolve shared section URLs before components read their initial detail hashes.
 const campusUrl = canonicalCampusUrl(window.location);

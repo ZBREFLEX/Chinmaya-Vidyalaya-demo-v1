@@ -1,0 +1,139 @@
+/* Continue the homepage's soft blue curves across the inner pages. */
+:is(.incampus-page, .academics-page, .campus-life-page, .achievements-page) {
+  background: linear-gradient(180deg, #f8fcff 0, #fff 680px);
+}
+
+:is(.incampus-page .incampus-opening, .academics-page .academic-opening,
+    .campus-life-page .life-opening, .achievements-page .achievement-opening,
+    .incampus-page .infra-intro, .incampus-page .verdant-opening,
+    .incampus-page .fac-opening) {
+  position: relative;
+  isolation: isolate;
+}
+
+:is(.incampus-page .incampus-opening, .academics-page .academic-opening,
+    .campus-life-page .life-opening, .achievements-page .achievement-opening,
+    .incampus-page .infra-intro, .incampus-page .verdant-opening,
+    .incampus-page .fac-opening)::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  pointer-events: none;
+  inset: 10% 0 auto auto;
+  width: min(46%, 510px);
+  height: 78%;
+  border-radius: 64% 36% 18% 82% / 48% 52% 48% 52%;
+  background: #e1f5fd;
+}
+
+:is(.incampus-page .incampus-opening, .academics-page .academic-opening,
+    .campus-life-page .life-opening, .achievements-page .achievement-opening)::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  pointer-events: none;
+  bottom: 12px;
+  left: 34%;
+  width: min(25%, 290px);
+  height: 105px;
+  border-radius: 80% 20% 65% 35% / 65% 45% 55% 35%;
+  background: #edf9fe;
+}
+
+.about-page .about-opening-surface::before {
+  content: '';
+  position: absolute;
+  pointer-events: none;
+  z-index: -1;
+  top: 9%;
+  right: 3%;
+  width: 40%;
+  height: 78%;
+  background: #e1f5fd;
+  border-radius: 64% 36% 18% 82% / 48% 52% 48% 52%;
+}
+
+/* Shape editorial photographs; document previews keep their complete edges. */
+.campus-life-page .life-opening__photos figure:first-child img,
+.incampus-page .infra-intro__photo img,
+.incampus-page .verdant-opening__image .verdant-photo > button {
+  border-radius: 95px 12px 70px 12px;
+}
+.campus-life-page .life-opening__photos figure:nth-child(2) img {
+  border-radius: 12px 60px 12px 45px;
+}
+.campus-life-page .life-opening__photos figure:nth-child(3) img {
+  border-radius: 55px 12px 45px 12px;
+}
+.campus-life-page .life-theme__photo > a,
+.achievements-page .recognition-featured .recognition-image:not(.recognition-image--poster) {
+  border-radius: 65px 10px 55px 10px;
+}
+.campus-life-page .life-theme--leadership .life-theme__photo > a {
+  border-radius: 10px 65px 10px 55px;
+}
+.campus-life-page .event-album__cover {
+  border-radius: 35px 8px 35px 8px;
+}
+
+:is(.academics-page .academic-explorer, .campus-life-page .life-groups,
+    .campus-life-page .life-archive, .achievements-page .recognition-browse) {
+  border-radius: 95px 0 75px 0;
+}
+.campus-life-page .event-gallery {
+  border-radius: 0 95px 0 75px;
+  background: linear-gradient(135deg, #f0faff, #fff 78%);
+}
+:is(.academics-page .academic-closing, .campus-life-page .life-closing,
+    .achievements-page .life-closing, .incampus-page .fac-closing) {
+  background: linear-gradient(110deg, #f0faff, #eaf7fc);
+  border-radius: 65px 12px 65px 12px;
+  padding-inline: clamp(24px, 4vw, 58px);
+  margin-block: 40px;
+}
+
+@media (max-width: 700px) {
+  :is(.incampus-page .incampus-opening, .academics-page .academic-opening,
+      .campus-life-page .life-opening, .achievements-page .achievement-opening,
+      .incampus-page .infra-intro, .incampus-page .verdant-opening,
+      .incampus-page .fac-opening)::before {
+    width: 58%;
+    height: 230px;
+    top: 45px;
+    opacity: .6;
+  }
+  :is(.incampus-page .incampus-opening, .academics-page .academic-opening,
+      .campus-life-page .life-opening, .achievements-page .achievement-opening)::after {
+    left: 12%;
+    width: 38%;
+    height: 70px;
+  }
+  .about-page .about-opening-surface::before { width: 68%; height: 260px; top: 55px; opacity: .6; }
+  .campus-life-page .life-opening__photos figure:first-child img,
+  .incampus-page .infra-intro__photo img,
+  .incampus-page .verdant-opening__image .verdant-photo > button {
+    border-radius: 60px 8px 45px 8px;
+  }
+  .campus-life-page .life-theme__photo > a,
+  .achievements-page .recognition-featured .recognition-image:not(.recognition-image--poster) {
+    border-radius: 45px 8px 35px 8px;
+  }
+  :is(.academics-page .academic-explorer, .campus-life-page .life-groups,
+      .campus-life-page .life-archive, .achievements-page .recognition-browse) {
+    border-radius: 45px 0 35px 0;
+  }
+  .campus-life-page .event-gallery { border-radius: 0 45px 0 35px; }
+  :is(.academics-page .academic-closing, .campus-life-page .life-closing,
+      .achievements-page .life-closing, .incampus-page .fac-closing) {
+    border-radius: 40px 8px 40px 8px;
+    margin-block: 25px;
+  }
+}
+
+@media print {
+  :is(.incampus-page, .academics-page, .campus-life-page, .achievements-page),
+  :is(.academic-closing, .life-closing, .fac-closing, .event-gallery) { background: white; }
+  :is(.incampus-opening, .academic-opening, .life-opening, .achievement-opening,
+      .infra-intro, .verdant-opening, .fac-opening, .about-opening-surface)::before,
+  :is(.incampus-opening, .academic-opening, .life-opening, .achievement-opening)::after { display: none; }
+}
