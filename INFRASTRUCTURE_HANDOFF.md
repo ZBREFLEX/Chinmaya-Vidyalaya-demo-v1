@@ -1,5 +1,7 @@
 # Infrastructure page handoff
 
+> Route update: this content is now a section of `/incampus`. Previous page and detail URLs remain compatible. See [INCAMPUS_HANDOFF.md](INCAMPUS_HANDOFF.md) for the current composition and navigation.
+
 ## Route and navigation
 
 `/incampus/infrastructure` (with optional trailing slash) renders one campus exploration page. The project still has no router dependency: `App.jsx` selects the page by pathname, with normal document links between pages. Deployment needs the same `index.html` fallback already required for legacy `/about` links; no server redirect rules were invented.

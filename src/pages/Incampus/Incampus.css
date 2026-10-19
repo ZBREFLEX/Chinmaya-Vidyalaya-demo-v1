@@ -1,0 +1,52 @@
+.incampus-page { --campus-header-offset: 125px; }
+.incampus-opening { display: grid; grid-template-columns: 1fr 1fr; column-gap: 7%; width: min(88%, 1240px); margin: 0 auto; padding: 26px 0 20px; }
+.incampus-opening > nav:first-child { grid-column: 1 / -1; display: flex; gap: 12px; font-size: 11px; margin-bottom: 30px; }
+.incampus-opening > nav:first-child a { text-decoration: underline; text-underline-offset: 4px; }
+.incampus-opening .eyebrow { grid-column: 1; margin: 0 0 15px; }
+.incampus-opening h1 { grid-column: 1; font-size: clamp(34px, 3vw, 43px); font-weight: 500; line-height: 1.1; }
+.incampus-opening h1 em { color: var(--color-action); font-style: normal; }
+.incampus-heading-line { display: block; }
+.incampus-opening > p:not(.eyebrow) { grid-column: 2; grid-row: 3; align-self: center; max-width: 420px; font-size: 15px; margin: 0; }
+.incampus-sections { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 12px 30px; border-bottom: 1px solid var(--color-border); padding: 20px 0 15px; }
+.incampus-sections a { display: inline-flex; align-items: center; gap: 16px; min-height: 44px; color: var(--color-action); font-size: 13px; }
+.incampus-sections a:hover { text-decoration: underline; text-underline-offset: 5px; }
+.incampus-sections a > span, .incampus-page .verdant-garden-links a > span:last-child { transition: transform 250ms ease; }
+.incampus-sections a:hover > span, .incampus-sections a:focus-visible > span { transform: translateY(3px); }
+.incampus-page > section[id] { scroll-margin-top: var(--campus-header-offset); }
+.incampus-page > #verdant-view, .incampus-page > #facilities { padding-top: 38px; margin-top: 50px; border-top: 1px solid var(--color-border); }
+.incampus-page .infra-page > .infra-shell > .infra-intro { padding-top: 20px; }
+.incampus-page .verdant-page > .verdant-shell > .verdant-opening { padding-top: 0; }
+.incampus-page .fac-page > .fac-shell > .fac-opening { padding-top: 0; }
+/* Entrances are triggered by the combined page when their content enters view. */
+.incampus-page .infra-intro :is(h1, h2) > span,
+.incampus-page .infra-intro__photo > img,
+.incampus-page .verdant-opening :is(h1, h2) > span,
+.incampus-page .verdant-opening__copy > p:not(.eyebrow),
+.incampus-page .verdant-opening__image,
+.incampus-page .fac-opening :is(h1, h2) > span,
+.incampus-page .fac-opening__photos .fac-photo { animation: none; }
+@media (prefers-reduced-motion: no-preference) {
+  .incampus-page :is(.verdant-photo, .fac-photo, .infra-enlarge) button img,
+  .incampus-page .infra-enlarge > img { transition: transform 550ms cubic-bezier(.22, 1, .36, 1); }
+  .incampus-page :is(.verdant-photo, .fac-photo) > button:hover img,
+  .incampus-page .infra-enlarge:hover > img { transform: scale(1.02); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .incampus-page * { scroll-behavior: auto !important; }
+}
+@media (max-width: 700px) {
+  .incampus-opening { display: block; width: 90%; padding-top: 24px; }
+  .incampus-opening > nav:first-child { margin-bottom: 28px; }
+  .incampus-opening h1 { font-size: 34px; }
+  .incampus-opening > p:not(.eyebrow) { font-size: 14px; margin-top: 18px; }
+  .incampus-sections { gap: 4px 22px; }
+  .incampus-sections a { font-size: 12px; gap: 10px; }
+  .incampus-page > #verdant-view, .incampus-page > #facilities { margin-top: 35px; padding-top: 30px; }
+}
+@media print {
+  .incampus-opening { display: block; width: 100%; padding: 0 0 15pt; }
+  .incampus-opening > nav:first-child, .incampus-opening > .incampus-sections, .incampus-opening .eyebrow { display: none; }
+  .incampus-opening h1 { font-size: 26pt; }
+  .incampus-opening > p:not(.eyebrow) { font-size: 10pt; }
+  .incampus-page > #verdant-view, .incampus-page > #facilities { break-before: page; margin: 0; padding: 0; }
+}

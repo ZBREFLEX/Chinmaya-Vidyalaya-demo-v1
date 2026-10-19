@@ -1,19 +1,19 @@
 .fac-page { --fac-header-offset: 125px; color: #526674; }
 .fac-shell { width: min(88%, 1240px); margin-inline: auto; }
-.fac-page :is(h1, h2, h3, h4) { font-weight: 500; }
+.fac-page :is(h1, h2, h3, h4, h5) { font-weight: 500; }
 .fac-page :is(h3, h4) { letter-spacing: -.035em; }
 .fac-page em { color: var(--color-action); font-style: normal; }
-.fac-page :is(article[id], h3[id], h4[id]), .fac-page#main { scroll-margin-top: var(--fac-header-offset); }
-.fac-page h3 { font-size: clamp(25px, 2.5vw, 35px); line-height: 1.15; margin: 0 0 20px; }
+.fac-page :is(article[id], h3[id], h4[id], h5[id]), .fac-page#main { scroll-margin-top: var(--fac-header-offset); }
+.fac-page .fac-facility-title { color: var(--color-heading); font-size: clamp(25px, 2.5vw, 35px); line-height: 1.15; margin: 0 0 20px; }
 .fac-page article p { font-size: 14px; line-height: 1.8; margin: 0 0 17px; }
 .fac-breadcrumb { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; padding-top: 26px; font-size: 11px; }
 .fac-breadcrumb a { text-decoration: underline; text-underline-offset: 4px; }
 .fac-breadcrumb [aria-current] { color: var(--color-heading); }
 .fac-opening { display: grid; grid-template-columns: 1fr 1.08fr; align-items: center; gap: 6%; padding: 42px 0; }
 .fac-opening .eyebrow { margin: 0 0 17px; }
-.fac-opening h1 { font-size: clamp(36px, 4vw, 58px); line-height: 1.1; letter-spacing: -.055em; }
-.fac-opening h1 > span { display: block; animation: fac-heading-in 550ms both; }
-.fac-opening h1 > span + span { animation-delay: 90ms; }
+.fac-opening :is(h1, h2) { font-size: clamp(36px, 4vw, 58px); line-height: 1.1; letter-spacing: -.055em; }
+.fac-opening :is(h1, h2) > span { display: block; animation: fac-heading-in 550ms both; }
+.fac-opening :is(h1, h2) > span + span { animation-delay: 90ms; }
 .fac-opening > div > p:not(.eyebrow) { font-size: 15px; line-height: 1.8; max-width: 450px; margin: 23px 0 0; }
 .fac-opening__photos { display: grid; grid-template-columns: 1.45fr 1fr; align-items: center; gap: 16px; }
 .fac-opening__photos .fac-photo:first-child { align-self: start; animation: fac-photo-in 600ms both; }
@@ -56,11 +56,11 @@
 .fac-chapter { padding-top: 65px; }
 .fac-chapter-heading { display: flex; justify-content: space-between; align-items: end; gap: 35px; margin-bottom: 35px; }
 .fac-chapter-heading .eyebrow { margin: 0 0 13px; }
-.fac-chapter-heading h2 { font-size: clamp(32px, 3.2vw, 45px); line-height: 1.15; letter-spacing: -.045em; }
+.fac-chapter-heading .fac-chapter-title { font-size: clamp(32px, 3.2vw, 45px); line-height: 1.15; letter-spacing: -.045em; }
 .fac-chapter-heading > p { font-size: 13px; line-height: 1.7; max-width: 310px; margin: 0; }
 .fac-target { transition: box-shadow 250ms, background-color 250ms; border-radius: 18px; }
 .fac-target.fac-destination { box-shadow: 0 0 0 7px #dff3f8; background-color: #f6fcfe; }
-.fac-page h4.fac-destination { outline: 3px solid #7fbecd; outline-offset: 5px; }
+.fac-page :is(h4, h5).fac-destination { outline: 3px solid #7fbecd; outline-offset: 5px; }
 .fac-page article .fac-label { color: var(--color-action); font-size: 10px; letter-spacing: .08em; margin: 0 0 13px; }
 .fac-library { display: grid; grid-template-columns: 1.35fr 1fr; gap: 6%; align-items: center; }
 .fac-library__quantity { color: var(--color-action); font-size: 44px !important; font-weight: 400; line-height: 1.05 !important; margin: 20px 0 !important; letter-spacing: -.035em; }
@@ -75,7 +75,7 @@
 .fac-lab-controls button:hover { border-color: var(--color-action); background: white; }
 .fac-lab-stage { min-width: 0; view-transition-name: facility-lab; }
 .fac-lab-panel[hidden] { display: none; }
-.fac-lab-panel h4 { color: var(--color-heading); font-size: 20px; line-height: 1.3; margin: 0 0 14px; }
+.fac-lab-panel :is(h4, h5) { color: var(--color-heading); font-size: 20px; line-height: 1.3; margin: 0 0 14px; }
 .fac-lab-panel .fac-photo > button { border-radius: 12px; }
 .fac-lab-stage .fac-lab-status { margin: 12px 0 0; color: var(--color-action); font-size: 11px; }
 ::view-transition-old(facility-lab), ::view-transition-new(facility-lab) { animation-duration: 240ms; }
@@ -98,7 +98,7 @@
 .fac-playground__photos .fac-photo--supporting { width: 38%; margin: 18px 0 0 auto; }
 .fac-photo--supporting .fac-photo__enlarge { gap: 8px; padding: 7px 10px; font-size: 9px; }
 .fac-courts { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; margin-top: 35px; }
-.fac-courts h3 { font-size: 26px; margin-bottom: 20px; }
+.fac-courts .fac-facility-title { font-size: 26px; margin-bottom: 20px; }
 .fac-court-photos { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
 .fac-court-photos .fac-photo > button { border-radius: 12px; }
 .fac-court-photos .fac-photo img { aspect-ratio: 1.12; object-fit: contain; }
@@ -107,12 +107,12 @@
 .fac-sick-bay { display: grid; grid-template-columns: 1fr 1fr; gap: 7%; align-items: center; }
 .fac-support-grid { display: grid; grid-template-columns: .9fr 1.1fr; align-items: start; gap: 7%; margin-top: 40px; }
 .fac-first-aid { padding: 35px; background: #f3f7f9; }
-.fac-transport h3 { margin-top: 23px; }
+.fac-transport .fac-facility-title { margin-top: 23px; }
 .fac-text-link { display: inline-flex; align-items: center; gap: 17px; min-height: 44px; padding: 8px 0; color: var(--color-action); text-decoration: underline; text-underline-offset: 5px; font-size: 12px; font-weight: 600; }
 .fac-source-note { max-width: 650px; font-size: 10px; line-height: 1.7; margin: 25px 0 0; }
 .fac-closing { display: flex; align-items: center; justify-content: space-between; gap: 40px; margin: 55px 0 60px; padding: 40px 45px; border-radius: 27px; background: var(--color-soft-blue); }
 .fac-closing .eyebrow { margin: 0 0 13px; }
-.fac-closing h2 { font-size: clamp(30px, 3vw, 42px); line-height: 1.15; }
+.fac-closing :is(h2, h3) { font-size: clamp(30px, 3vw, 42px); line-height: 1.15; }
 .fac-closing p:not(.eyebrow) { max-width: 440px; font-size: 13px; margin: 20px 0 0; }
 .fac-related { display: flex; justify-content: center; gap: 18px; margin-top: 14px; }
 .fac-related a { display: inline-flex; align-items: center; min-height: 44px; color: var(--color-action); font-size: 11px; text-decoration: underline; text-underline-offset: 4px; }
@@ -121,7 +121,7 @@
 @media (max-width: 1000px) {
   .fac-shell { width: 90%; }
   .fac-opening { gap: 5%; }
-  .fac-opening h1 { font-size: clamp(33px, 4.5vw, 46px); }
+  .fac-opening :is(h1, h2) { font-size: clamp(33px, 4.5vw, 46px); }
   .fac-opening__photos { gap: 10px; }
   .fac-opening__photos .fac-photo__enlarge { font-size: 0; padding: 7px 10px; }
   .fac-finder { padding: 20px; }
@@ -132,12 +132,12 @@
   .fac-lab-controls button { font-size: 11px; padding: 10px; }
   .fac-audio, .fac-first-aid { padding: 26px; }
   .fac-courts { gap: 25px; }
-  .fac-courts h3 { font-size: 23px; }
+  .fac-courts .fac-facility-title { font-size: 23px; }
   .fac-court-photos .fac-photo__enlarge { font-size: 0; padding: 6px 9px; }
 }
 @media (max-width: 700px) {
   .fac-opening { grid-template-columns: 1fr; gap: 28px; padding: 32px 0 25px; }
-  .fac-opening h1 { font-size: clamp(36px, 8.8vw, 49px); }
+  .fac-opening :is(h1, h2) { font-size: clamp(36px, 8.8vw, 49px); }
   .fac-opening > div > p:not(.eyebrow) { margin-top: 20px; font-size: 14px; }
   .fac-opening__photos { grid-template-columns: 1.5fr 1fr; gap: 13px; }
   .fac-opening__photos .fac-photo:last-child { padding-top: 25px; }
@@ -149,28 +149,28 @@
   .fac-finder [role=option] > span:not([aria-hidden]) { display: none; }
   .fac-chapter { padding-top: 43px; }
   .fac-chapter-heading { flex-direction: column; align-items: start; gap: 15px; margin-bottom: 28px; }
-  .fac-chapter-heading h2 { font-size: 33px; }
+  .fac-chapter-heading .fac-chapter-title { font-size: 33px; }
   .fac-chapter-heading > p { max-width: 370px; font-size: 12px; }
   .fac-library, .fac-laboratories, .fac-digital-pair, .fac-playground, .fac-sick-bay, .fac-support-grid { grid-template-columns: 1fr; gap: 25px; }
   .fac-library > .fac-photo, .fac-sick-bay > .fac-photo { order: 2; }
-  .fac-page h3 { font-size: 29px; }
+  .fac-page .fac-facility-title { font-size: 29px; }
   .fac-page article p { font-size: 14px; }
   .fac-library__quantity { font-size: 38px !important; }
   .fac-laboratories { margin-top: 35px; padding: 24px 18px; }
   .fac-lab-controls button { font-size: 12px; }
-  .fac-lab-panel h4 { font-size: 21px; }
+  .fac-lab-panel :is(h4, h5) { font-size: 21px; }
   .fac-digital-pair { margin-top: 35px; gap: 30px; }
   .fac-audio > svg { width: 52px; margin-bottom: 18px; }
   .fac-sports, .fac-care { margin-top: 40px; }
   .fac-playground > div:first-child { padding-top: 0; }
   .fac-playground__photos .fac-photo--supporting { width: 64%; margin-top: 17px; }
   .fac-courts { grid-template-columns: 1fr; gap: 30px; margin-top: 28px; }
-  .fac-courts h3 { font-size: 27px; }
+  .fac-courts .fac-facility-title { font-size: 27px; }
   .fac-court-photos { gap: 12px; }
   .fac-support-grid { margin-top: 30px; gap: 32px; }
   .fac-source-note { margin-top: 20px; }
   .fac-closing { flex-direction: column; align-items: start; gap: 27px; padding: 28px 23px; margin: 35px 0 40px; }
-  .fac-closing h2 { font-size: 32px; }
+  .fac-closing :is(h2, h3) { font-size: 32px; }
   .fac-related { justify-content: start; gap: 22px; }
 }
 @media (prefers-reduced-motion: reduce) {
@@ -183,15 +183,15 @@
   .fac-page { color: black; }
   .fac-breadcrumb, .fac-opening__photos, .fac-finder, .fac-closing, .fac-photo__enlarge, .fac-lab-controls, .fac-lab-status, .fac-text-link, .fac-audio > svg { display: none !important; }
   .fac-opening { display: block; padding: 0 0 15pt; }
-  .fac-opening h1 { font-size: 25pt; }
-  .fac-opening h1 > span { display: inline; }
-  .fac-opening h1 > span + span::before { content: ' '; }
+  .fac-opening :is(h1, h2) { font-size: 25pt; }
+  .fac-opening :is(h1, h2) > span { display: inline; }
+  .fac-opening :is(h1, h2) > span + span::before { content: ' '; }
   .fac-opening > div > p:not(.eyebrow) { max-width: none; font-size: 10pt; margin-top: 10pt; }
   .fac-chapter { margin-top: 16pt; padding-top: 16pt; border-top: 1px solid #aaa; }
   .fac-chapter-heading { display: block; margin-bottom: 15pt; }
-  .fac-chapter-heading h2 { font-size: 21pt; }
+  .fac-chapter-heading .fac-chapter-title { font-size: 21pt; }
   .fac-chapter-heading > p { display: none; }
-  .fac-page h3, .fac-courts h3 { font-size: 17pt; margin-bottom: 10pt; }
+  .fac-page .fac-facility-title, .fac-courts .fac-facility-title { font-size: 17pt; margin-bottom: 10pt; }
   .fac-page article p { font-size: 10pt; line-height: 1.5; }
   .fac-library, .fac-laboratories, .fac-digital-pair, .fac-playground, .fac-courts, .fac-sick-bay, .fac-support-grid { display: block; margin-top: 18pt; padding: 0; background: white; }
   .fac-page article { break-inside: avoid; box-shadow: none !important; border-radius: 0; }
@@ -201,7 +201,7 @@
   .fac-lab-stage { display: grid; grid-template-columns: 1fr 1fr; gap: 14pt; }
   .fac-lab-panel[hidden] { display: block !important; }
   .fac-lab-panel { break-inside: avoid; }
-  .fac-lab-panel h4 { font-size: 12pt; margin-bottom: 7pt; }
+  .fac-lab-panel :is(h4, h5) { font-size: 12pt; margin-bottom: 7pt; }
   .fac-laboratories { break-inside: auto !important; }
   .fac-photo > button { background: white; border-radius: 0; }
   .fac-photo img { width: auto; height: auto; max-width: 100%; max-height: 145pt; margin-inline: auto; object-fit: contain; aspect-ratio: auto !important; }

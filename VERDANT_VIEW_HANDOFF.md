@@ -1,5 +1,7 @@
 # Verdant View handoff
 
+> Route update: this content is now a section of `/incampus`. Previous page and detail URLs remain compatible. See [INCAMPUS_HANDOFF.md](INCAMPUS_HANDOFF.md) for the current composition and navigation.
+
 ## Route and composition
 
 `/incampus/verdant-view` (optional trailing slash) is one concise garden page using the existing pathname-based routing and shared header/footer. Incampus links directly to Infrastructure, Verdant View and Facilities. Footer navigation includes all three campus pages. Home/About links return to the homepage from either campus page; Contact stays local to the footer. Existing host fallback requirements are unchanged.

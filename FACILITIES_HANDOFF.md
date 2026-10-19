@@ -1,5 +1,7 @@
 # Facilities handoff
 
+> Route update: this content is now a section of `/incampus`. Previous page and detail URLs remain compatible. See [INCAMPUS_HANDOFF.md](INCAMPUS_HANDOFF.md) for the current composition and navigation.
+
 ## Route and composition
 
 `/incampus/facilities` (optional trailing slash) consolidates the ten facilities into one page. Each facility has its own stable hash; individual laboratories also have hashes. No equivalent facility routes existed in the project, so no legacy application paths required forwarding. The project retains its existing pathname-based routing, normal links between pages and existing host fallback requirement.

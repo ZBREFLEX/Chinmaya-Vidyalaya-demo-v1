@@ -15,16 +15,22 @@ function FacilityPhoto({ photo, onOpen, eager = false, className = '', sizes = '
   return <figure className={`fac-photo ${className}`} data-facility-reveal="photo"><button type="button" aria-label={`Enlarge photograph: ${photo.caption}`} aria-haspopup="dialog" onClick={onOpen}><img src={photo.src} srcSet={`${photo.preview} 400w, ${photo.src} ${photo.width}w`} sizes={sizes} width={photo.width} height={photo.height} alt={photo.alt} loading={eager ? 'eager' : 'lazy'} fetchPriority={eager ? 'high' : 'auto'} /><span className="fac-photo__enlarge" aria-hidden="true">Enlarge photograph <span>↗</span></span></button><figcaption>{photo.caption}</figcaption></figure>;
 }
 
-function ChapterHeading({ index }) {
+function ChapterHeading({ index, embedded }) {
+  const Heading = embedded ? 'h3' : 'h2';
   const chapter = facilityChapters[index];
-  return <div className="fac-chapter-heading" data-facility-reveal="copy"><div><p className="eyebrow">{String(index + 1).padStart(2, '0')} / A school day, supported</p><h2 id={`${chapter.id}-title`}>{chapter.name}</h2></div><p>{chapter.introduction}</p></div>;
+  return <div className="fac-chapter-heading" data-facility-reveal="copy"><div><p className="eyebrow">{String(index + 1).padStart(2, '0')} / A school day, supported</p><Heading className="fac-chapter-title" id={`${chapter.id}-title`}>{chapter.name}</Heading></div><p>{chapter.introduction}</p></div>;
 }
 
-function FacilityHeading({ facility }) {
-  return <h3 id={`${facility.id}-title`} tabIndex={-1}>{facility.name}</h3>;
+function FacilityHeading({ facility, embedded }) {
+  const Heading = embedded ? 'h4' : 'h3';
+  return <Heading className="fac-facility-title" data-facility-heading id={`${facility.id}-title`} tabIndex={-1}>{facility.name}</Heading>;
 }
 
-export default function Facilities() {
+export default function Facilities({ embedded = false }) {
+  const Container = embedded ? 'section' : 'main';
+  const OpeningTitle = embedded ? 'h2' : 'h1';
+  const LabHeading = embedded ? 'h5' : 'h4';
+  const ClosingHeading = embedded ? 'h3' : 'h2';
   const initial = facilityTarget(window.location.hash.slice(1));
   const [labId, setLabId] = useState(initial?.lab?.id || laboratoryEntries[0].id);
   const [pending, setPending] = useState(null);
@@ -52,7 +58,7 @@ export default function Facilities() {
     const syncHash = () => {
       const id = window.location.hash.slice(1);
       if (facilityTarget(id)) reveal(id, { focus: false, updateUrl: false, smooth: false });
-      else if (!id) {
+      else if (!id && !embedded) {
         transition.current?.skipTransition(); labVersion.current += 1;
         setLabId(laboratoryEntries[0].id);
         setPending({ id: 'main', focus: false, smooth: false });
@@ -62,7 +68,7 @@ export default function Facilities() {
     window.addEventListener('hashchange', syncHash);
     window.addEventListener('popstate', syncHash);
     return () => { transition.current?.skipTransition(); window.removeEventListener('hashchange', syncHash); window.removeEventListener('popstate', syncHash); };
-  }, [reveal]);
+  }, [reveal, embedded]);
 
   useLayoutEffect(() => {
     const root = page.current;
@@ -81,7 +87,7 @@ export default function Facilities() {
     const frame = requestAnimationFrame(() => { second = requestAnimationFrame(() => {
       const target = document.getElementById(pending.id);
       if (!target) return;
-      const heading = pending.id.endsWith('-lab') ? target : target.querySelector('h3');
+      const heading = pending.id.endsWith('-lab') ? target : target.querySelector('[data-facility-heading]');
       if (pending.focus) {
         heading?.focus({ preventScroll: true });
         target.classList.add('fac-destination');
@@ -98,7 +104,7 @@ export default function Facilities() {
     const animations = new Set();
     let observer;
     function settle() { animations.forEach(animation => animation.cancel()); animations.clear(); }
-    if (!media.matches && 'IntersectionObserver' in window) {
+    if (!embedded && !media.matches && 'IntersectionObserver' in window) {
       try {
         observer = new IntersectionObserver(entries => entries.forEach(entry => {
           if (!entry.isIntersecting) return;
@@ -134,7 +140,7 @@ export default function Facilities() {
     window.addEventListener('beforeprint', beforePrint);
     window.addEventListener('afterprint', afterPrint);
     return () => { settle(); observer?.disconnect(); media.removeEventListener('change', changePreference); window.removeEventListener('beforeprint', beforePrint); window.removeEventListener('afterprint', afterPrint); };
-  }, []);
+  }, [embedded]);
 
   function openPhoto(facility, index, event, photos = facility.photos) {
     setViewer({ title: facility.name, photos, index, returnTo: event.currentTarget });
@@ -164,30 +170,30 @@ export default function Facilities() {
     catch { setDisclosureOpen(digitalDetails.current, open, { immediate: true }); }
   }
 
-  return <main id="main" className="fac-page" ref={page}>
+  return <Container id={embedded ? 'facilities' : 'main'} className="fac-page" ref={page} tabIndex={embedded ? -1 : undefined} aria-labelledby={embedded ? 'fac-title' : undefined}>
     <div className="fac-shell">
-      <nav className="fac-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><span>Incampus</span><span aria-hidden="true">/</span><span aria-current="page">Facilities</span></nav>
-      <section className="fac-opening" aria-labelledby="fac-title"><div><p className="eyebrow">Facilities</p><h1 id="fac-title"><span>Space to discover.</span><span>Support to <em>thrive.</em></span></h1><p>From books and experiments to a game on the court, discover the facilities that support learning, play and everyday life at Chinmaya Vidyalaya.</p></div><div className="fac-opening__photos">{photograph(library, 0, { eager: true, sizes: '(max-width: 700px) 55vw, 370px' })}{photograph(badminton, 0, { eager: true, sizes: '(max-width: 700px) 35vw, 230px' })}</div></section>
+      {!embedded && <nav className="fac-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><span>Incampus</span><span aria-hidden="true">/</span><span aria-current="page">Facilities</span></nav>}
+      <section className="fac-opening" aria-labelledby="fac-title"><div><p className="eyebrow">Facilities</p><OpeningTitle id="fac-title"><span>Space to discover.</span><span>Support to <em>thrive.</em></span></OpeningTitle><p>From books and experiments to a game on the court, discover the facilities that support learning, play and everyday life at Chinmaya Vidyalaya.</p></div><div className="fac-opening__photos">{photograph(library, 0, { eager: true, sizes: '(max-width: 700px) 55vw, 370px' })}{photograph(badminton, 0, { eager: true, sizes: '(max-width: 700px) 35vw, 230px' })}</div></section>
       <FacilityFinder onSelect={id => reveal(id)} />
 
-      <section className="fac-chapter fac-learning" aria-labelledby="learning-discovery-title"><ChapterHeading index={0} />
-        <article id="library" className="fac-library fac-target" aria-labelledby="library-title">{photograph(library)}<div data-facility-reveal="copy"><p className="fac-label">A world of reading</p><FacilityHeading facility={library} /><p className="fac-library__quantity"><span>approximately</span>15,000 <small>books</small></p><Prose facility={library} /></div></article>
-        <article id="laboratories" className="fac-laboratories fac-target" aria-labelledby="laboratories-title"><div className="fac-laboratories__copy" data-facility-reveal="copy"><p className="fac-label">Learning through discovery</p><FacilityHeading facility={laboratories} /><Prose facility={laboratories} /><div className="fac-lab-controls" role="group" aria-label="Choose a laboratory">{laboratoryEntries.map(lab => <button key={lab.id} type="button" aria-pressed={lab.id === labId} aria-controls={`${lab.id}-panel`} onClick={() => selectLab(lab)}>{lab.name}<span aria-hidden="true">↗</span></button>)}</div></div><div className="fac-lab-stage">{laboratoryEntries.map(lab => <section id={`${lab.id}-panel`} className="fac-lab-panel" hidden={lab.id !== labId} key={lab.id} aria-labelledby={lab.id}><h4 id={lab.id} tabIndex={-1}>{lab.name} Lab</h4><FacilityPhoto photo={lab.photo} onOpen={event => openPhoto({ name: 'Laboratories', photos: laboratoryEntries.map(item => item.photo) }, laboratoryEntries.indexOf(lab), event)} /></section>)}<p className="fac-lab-status" role="status" aria-live="polite">{selectedLab.name} · {laboratoryEntries.indexOf(selectedLab) + 1} / {laboratoryEntries.length}</p></div></article>
-        <div className="fac-digital-pair"><article id="digital-classrooms" className="fac-digital fac-target" aria-labelledby="digital-classrooms-title">{photograph(digital)}<div data-facility-reveal="copy"><FacilityHeading facility={digital} /><p>{digital.introduction}</p><details ref={digitalDetails} className="fac-details"><summary onClick={event => { event.preventDefault(); toggleDigital(); }}>Read about digital learning <svg viewBox="0 0 16 16" aria-hidden="true"><path d="m4 6 4 4 4-4" /></svg></summary><div className="details-content"><Prose facility={digital} /></div></details></div></article><article id="audio-visual-room" className="fac-audio fac-target" aria-labelledby="audio-visual-room-title" data-facility-reveal="copy"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M12 12h40v29H12zM8 8h48M32 41v11m-10 6 10-6 10 6" /></svg><p className="fac-label">Shared learning</p><FacilityHeading facility={audio} /><Prose facility={audio} /></article></div>
+      <section className="fac-chapter fac-learning" aria-labelledby="learning-discovery-title"><ChapterHeading embedded={embedded} index={0} />
+        <article id="library" className="fac-library fac-target" aria-labelledby="library-title">{photograph(library)}<div data-facility-reveal="copy"><p className="fac-label">A world of reading</p><FacilityHeading embedded={embedded} facility={library} /><p className="fac-library__quantity"><span>approximately</span>15,000 <small>books</small></p><Prose facility={library} /></div></article>
+        <article id="laboratories" className="fac-laboratories fac-target" aria-labelledby="laboratories-title"><div className="fac-laboratories__copy" data-facility-reveal="copy"><p className="fac-label">Learning through discovery</p><FacilityHeading embedded={embedded} facility={laboratories} /><Prose facility={laboratories} /><div className="fac-lab-controls" role="group" aria-label="Choose a laboratory">{laboratoryEntries.map(lab => <button key={lab.id} type="button" aria-pressed={lab.id === labId} aria-controls={`${lab.id}-panel`} onClick={() => selectLab(lab)}>{lab.name}<span aria-hidden="true">↗</span></button>)}</div></div><div className="fac-lab-stage">{laboratoryEntries.map(lab => <section id={`${lab.id}-panel`} className="fac-lab-panel" hidden={lab.id !== labId} key={lab.id} aria-labelledby={lab.id}><LabHeading id={lab.id} tabIndex={-1}>{lab.name} Lab</LabHeading><FacilityPhoto photo={lab.photo} onOpen={event => openPhoto({ name: 'Laboratories', photos: laboratoryEntries.map(item => item.photo) }, laboratoryEntries.indexOf(lab), event)} /></section>)}<p className="fac-lab-status" role="status" aria-live="polite">{selectedLab.name} · {laboratoryEntries.indexOf(selectedLab) + 1} / {laboratoryEntries.length}</p></div></article>
+        <div className="fac-digital-pair"><article id="digital-classrooms" className="fac-digital fac-target" aria-labelledby="digital-classrooms-title">{photograph(digital)}<div data-facility-reveal="copy"><FacilityHeading embedded={embedded} facility={digital} /><p>{digital.introduction}</p><details ref={digitalDetails} className="fac-details"><summary onClick={event => { event.preventDefault(); toggleDigital(); }}>Read about digital learning <svg viewBox="0 0 16 16" aria-hidden="true"><path d="m4 6 4 4 4-4" /></svg></summary><div className="details-content"><Prose facility={digital} /></div></details></div></article><article id="audio-visual-room" className="fac-audio fac-target" aria-labelledby="audio-visual-room-title" data-facility-reveal="copy"><svg viewBox="0 0 64 64" aria-hidden="true"><path d="M12 12h40v29H12zM8 8h48M32 41v11m-10 6 10-6 10 6" /></svg><p className="fac-label">Shared learning</p><FacilityHeading embedded={embedded} facility={audio} /><Prose facility={audio} /></article></div>
       </section>
 
-      <section className="fac-chapter fac-sports" aria-labelledby="sports-play-title"><ChapterHeading index={1} />
-        <article id="playground" className="fac-playground fac-target" aria-labelledby="playground-title"><div data-facility-reveal="copy"><p className="fac-label">Room to play</p><FacilityHeading facility={playground} /><Prose facility={playground} /></div><div className="fac-playground__photos">{photograph(playground)}{photograph(playground, 1, { className: 'fac-photo--supporting', sizes: '(max-width: 700px) 65vw, 250px' })}</div></article>
-        <div className="fac-courts">{[basketball, badminton].map(facility => <article id={facility.id} key={facility.id} className="fac-target" aria-labelledby={`${facility.id}-title`}><FacilityHeading facility={facility} /><div className="fac-court-photos">{facility.photos.map((photo, index) => <FacilityPhoto key={photo.src} photo={photo} onOpen={event => openPhoto(facility, index, event)} sizes="(max-width: 700px) 43vw, 290px" />)}</div></article>)}</div>
+      <section className="fac-chapter fac-sports" aria-labelledby="sports-play-title"><ChapterHeading embedded={embedded} index={1} />
+        <article id="playground" className="fac-playground fac-target" aria-labelledby="playground-title"><div data-facility-reveal="copy"><p className="fac-label">Room to play</p><FacilityHeading embedded={embedded} facility={playground} /><Prose facility={playground} /></div><div className="fac-playground__photos">{photograph(playground)}{photograph(playground, 1, { className: 'fac-photo--supporting', sizes: '(max-width: 700px) 65vw, 250px' })}</div></article>
+        <div className="fac-courts">{[basketball, badminton].map(facility => <article id={facility.id} key={facility.id} className="fac-target" aria-labelledby={`${facility.id}-title`}><FacilityHeading embedded={embedded} facility={facility} /><div className="fac-court-photos">{facility.photos.map((photo, index) => <FacilityPhoto key={photo.src} photo={photo} onOpen={event => openPhoto(facility, index, event)} sizes="(max-width: 700px) 43vw, 290px" />)}</div></article>)}</div>
       </section>
 
-      <section className="fac-chapter fac-care" aria-labelledby="care-support-title"><ChapterHeading index={2} />
-        <article id="sick-bay" className="fac-sick-bay fac-target" aria-labelledby="sick-bay-title">{photograph(sickBay)}<div data-facility-reveal="copy"><p className="fac-label">A comfortable space</p><FacilityHeading facility={sickBay} /><Prose facility={sickBay} /></div></article>
-        <div className="fac-support-grid"><article id="apan-mithra" className="fac-first-aid fac-target" aria-labelledby="apan-mithra-title" data-facility-reveal="copy"><p className="fac-label">Help during the school day</p><FacilityHeading facility={firstAid} /><Prose facility={firstAid} /></article><article id="transport" className="fac-transport fac-target" aria-labelledby="transport-title">{photograph(transport)}<FacilityHeading facility={transport} /><Prose facility={transport} /><a className="fac-text-link" href="#contact">Enquire about transport <span aria-hidden="true">↗</span></a></article></div>
+      <section className="fac-chapter fac-care" aria-labelledby="care-support-title"><ChapterHeading embedded={embedded} index={2} />
+        <article id="sick-bay" className="fac-sick-bay fac-target" aria-labelledby="sick-bay-title">{photograph(sickBay)}<div data-facility-reveal="copy"><p className="fac-label">A comfortable space</p><FacilityHeading embedded={embedded} facility={sickBay} /><Prose facility={sickBay} /></div></article>
+        <div className="fac-support-grid"><article id="apan-mithra" className="fac-first-aid fac-target" aria-labelledby="apan-mithra-title" data-facility-reveal="copy"><p className="fac-label">Help during the school day</p><FacilityHeading embedded={embedded} facility={firstAid} /><Prose facility={firstAid} /></article><article id="transport" className="fac-transport fac-target" aria-labelledby="transport-title">{photograph(transport)}<FacilityHeading embedded={embedded} facility={transport} /><Prose facility={transport} /><a className="fac-text-link" href="#contact">Enquire about transport <span aria-hidden="true">↗</span></a></article></div>
       </section>
       <p className="fac-source-note">Information and photographs are from the school’s published material. Please contact the school for current details.</p>
-      <section className="fac-closing" aria-labelledby="fac-closing-title"><div><p className="eyebrow">A brighter beginning</p><h2 id="fac-closing-title">A school day<br /><em>full of possibility.</em></h2><p>Speak to us about becoming part of the Chinmaya Vidyalaya community.</p></div><div><EnquiryButton className="button button--primary">Enquire Now <span aria-hidden="true">↗</span></EnquiryButton><div className="fac-related"><a href="/incampus/infrastructure">Infrastructure</a><a href="/incampus/verdant-view">Verdant View</a></div></div></section>
+      <section className="fac-closing" aria-labelledby="fac-closing-title"><div><p className="eyebrow">A brighter beginning</p><ClosingHeading id="fac-closing-title">A school day<br /><em>full of possibility.</em></ClosingHeading><p>Speak to us about becoming part of the Chinmaya Vidyalaya community.</p></div><div><EnquiryButton className="button button--primary">Enquire Now <span aria-hidden="true">↗</span></EnquiryButton><div className="fac-related"><a href={embedded ? '#infrastructure' : '/incampus#infrastructure'}>Infrastructure</a><a href={embedded ? '#verdant-view' : '/incampus#verdant-view'}>Verdant View</a></div></div></section>
     </div>
     {viewer && <PhotoLightbox title={viewer.title} photos={viewer.photos} index={viewer.index} onChange={index => setViewer(current => ({ ...current, index }))} onClose={() => setViewer(null)} returnTo={viewer.returnTo} />}
-  </main>;
+  </Container>;
 }
