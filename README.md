@@ -1,4 +1,26 @@
-# React + Vite
+# Chinmaya Vidyalaya
+
+## Deploy to Vercel
+
+The Git repository root contains `package.json`, `index.html` and `vercel.json`.
+Use these Vercel project settings:
+
+- Root Directory: `./` (repository root).
+- Framework Preset: Vite.
+- Build Command: `npm run build`.
+- Output Directory: `dist`.
+
+`vercel.json` supplies the build settings and routes direct page requests back
+to `index.html` so the React application can render `/incampus`, `/academics`,
+`/campus-life`, `/achievements` and legacy About links. Existing static assets
+are served normally.
+
+Commit and push configuration changes, then deploy the new commit. If even `/`
+returns Vercel's `NOT_FOUND`, check that the production domain points to a Ready
+deployment for the correct project and that the deployed commit includes these
+files. A rewrite does not repair a removed deployment or an incorrect domain.
+
+## React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
 
