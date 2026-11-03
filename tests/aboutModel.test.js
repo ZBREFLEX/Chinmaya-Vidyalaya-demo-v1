@@ -31,7 +31,8 @@ test('every policy source identifier is covered exactly once, with repeated word
   content.rules[1].items.forEach((text, index) => assert.equal(rules.find(rule => rule.sourceIds.includes(`admissions:${index + 1}`)).text, text));
 });
 test('all source directories, uniform instructions and prose remain indexed', () => {
-  assert.equal(peopleGroups.flatMap(group => group.records).length, content.committee.length + content.leaders.length + content.departments.length + content.staff.length);
+  const expectedPeopleCount = content.committee.length + content.leaders.length + content.departments.length + content.staff.length + (content.teaching ? content.teaching.flatMap(d => d.members).length : 0);
+  assert.equal(peopleGroups.flatMap(group => group.records).length, expectedPeopleCount);
   uniformGroups.forEach(group => assert.ok(searchIndex.find(item => item.id === group.id).text.includes(group.items.at(-1))));
   content.story.forEach((section, index) => assert.equal(searchIndex.find(item => item.id === `story-detail-${index + 1}`).text, section.paragraphs.join(' ')));
   assert.equal(searchIndex.find(item => item.id === 'principal-letter').text, content.principal.join(' '));

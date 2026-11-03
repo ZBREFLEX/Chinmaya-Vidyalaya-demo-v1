@@ -10,15 +10,18 @@ const destinations = [
   { label: 'About', items: ['About Chinmaya', 'Our Story', 'Motto', 'Vision & Values', "Principal’s Message", 'Management', 'Administration', 'Staff', 'Rules & Regulation'] },
   { label: 'Kindergarten', items: ['Early Learning', 'LKG & UKG', 'Learning Environment'] },
   { label: 'Academics', items: academicSections.map(([, label]) => label) },
+  { label: 'CBSE', items: ['Mandatory Public Disclosure', 'Affiliation', 'Accreditation', 'Declaration', 'Text Books'] },
   { label: 'Campus Life', items: lifeSections.map(([, label]) => label) },
   { label: 'Incampus', items: ['Infrastructure', 'Verdant View', 'Facilities'] },
   { label: 'Achievements', items: ['Featured recognition', 'Browse achievements'] },
   { label: 'Admissions', items: ['Admission Process', 'Eligibility', 'School Prospectus'] },
 ];
+const cbseLinks = { 'Mandatory Public Disclosure': '/cbse/mandatory-public-disclosure' };
 const lifeLinks = Object.fromEntries(lifeSections.map(([id, label]) => [label, id]));
 const academicLinks = Object.fromEntries(academicSections.map(([id, label]) => [label, id]));
 const campusLinks = { Infrastructure: 'infrastructure', 'Verdant View': 'verdant-view', Facilities: 'facilities' };
 const sectionLinks = { 'About Chinmaya': '#about', 'Our Story': '#story', 'Motto': '#motto', 'Vision & Values': '#vision', "Principal’s Message": '#principal', 'Management': '#management', 'Administration': '#administration', 'Staff': '#staff', 'Rules & Regulation': '#rules', 'Early Learning': '#kindergarten', 'LKG & UKG': '#kindergarten', 'Learning Environment': '#kindergarten', 'Our Campus': '#campus-life', 'Sports & Activities': '#campus-life', 'Clubs & Culture': '#campus-life', 'Student Achievements': '#achievements', 'School Highlights': '#achievements', 'Admission Process': '#admissions' };
+const PARENT_PORTAL_URL = 'https://chinmayavidyalayakolazhy.eschoolweb.org/login';
 
 export default function Navbar({ currentPage = 'home' }) {
   const homeLink = hash => currentPage !== 'home' ? `/${hash}` : hash;
@@ -29,6 +32,7 @@ export default function Navbar({ currentPage = 'home' }) {
   const header = useRef(null);
   const toggle = useRef(null);
   const dropdownTriggers = useRef([]);
+  const hoverTimer = useRef(null);
 
 
   useEffect(() => {
@@ -87,27 +91,53 @@ export default function Navbar({ currentPage = 'home' }) {
       <a href={homeLink('#home')} aria-current={currentPage === 'home' && activeArea === 'home' ? 'location' : undefined} onClick={() => { setOpenDropdown(null); setMenuOpen(false); }}>Home</a>
       {destinations.map(({ label, items }, index) => {
         const isOpen = openDropdown === index;
-        return <div className={`nav-dropdown ${isOpen ? 'is-open' : ''}`} key={label} onBlur={event => {
-          if (!event.currentTarget.contains(event.relatedTarget)) setOpenDropdown(current => current === index ? null : current);
-        }}>
+        return <div
+          className={`nav-dropdown ${isOpen ? 'is-open' : ''}`}
+          key={label}
+          onMouseEnter={() => {
+            if (window.innerWidth > 1190) {
+              clearTimeout(hoverTimer.current);
+              setOpenDropdown(index);
+            }
+          }}
+          onMouseLeave={() => {
+            if (window.innerWidth > 1190) {
+              hoverTimer.current = setTimeout(() => {
+                setOpenDropdown(current => current === index ? null : current);
+              }, 150);
+            }
+          }}
+          onBlur={event => {
+            if (!event.currentTarget.contains(event.relatedTarget)) setOpenDropdown(current => current === index ? null : current);
+          }}
+        >
           {label === 'Achievements' || label === 'About' || label === 'Incampus' || label === 'Academics' || label === 'Campus Life' ? <div className="nav-dropdown__heading">
             <a className="nav-dropdown__page-link" href={label === 'Achievements' ? '/achievements' : label === 'Campus Life' ? '/campus-life' : label === 'Academics' ? '/academics' : label === 'Incampus' ? '/incampus' : homeLink('#about')} aria-current={label === 'Achievements' ? currentPage === 'achievements' ? 'page' : undefined : label === 'Campus Life' ? currentPage === 'campus-life' ? 'page' : undefined : label === 'Academics' ? currentPage === 'academics' ? 'page' : undefined : label === 'Incampus' ? currentPage === 'incampus' ? 'page' : undefined : activeArea === 'about' ? 'location' : undefined} onClick={() => { setOpenDropdown(null); setMenuOpen(false); }}>{label}</a>
             <button ref={element => { dropdownTriggers.current[index] = element; }} className="nav-dropdown__trigger nav-dropdown__arrow" aria-label={`${label} sections`} aria-expanded={isOpen} aria-controls={`nav-panel-${index}`} onClick={() => setOpenDropdown(isOpen ? null : index)}><svg viewBox="0 0 16 16" aria-hidden="true"><path d="m4 6 4 4 4-4" /></svg></button>
-          </div> : <button ref={element => { dropdownTriggers.current[index] = element; }} className="nav-dropdown__trigger" aria-expanded={isOpen} aria-controls={`nav-panel-${index}`} onClick={() => setOpenDropdown(isOpen ? null : index)}>
+          </div> : <button
+            ref={element => { dropdownTriggers.current[index] = element; }}
+            className="nav-dropdown__trigger"
+            aria-expanded={isOpen}
+            aria-controls={`nav-panel-${index}`}
+            aria-current={label === 'CBSE' && currentPage === 'cbse-disclosure' ? 'page' : undefined}
+            onClick={() => setOpenDropdown(isOpen ? null : index)}
+          >
             {label}<svg viewBox="0 0 16 16" aria-hidden="true"><path d="m4 6 4 4 4-4" /></svg>
           </button>}
           <div id={`nav-panel-${index}`} className="nav-dropdown__panel" inert={!isOpen}>
             <div className="nav-dropdown__content">
               <p className="nav-dropdown__eyebrow">{label}</p>
-              <ul>{items.map(item => <li key={item}>{label === 'Achievements' ? <a className="nav-dropdown__item" href={`/achievements#${item === 'Featured recognition' ? 'featured-recognition' : 'browse-achievements'}`} onClick={() => { setOpenDropdown(null); setMenuOpen(false); }}>{item}<span aria-hidden="true">&#8599;</span></a> : lifeLinks[item] ? <a className="nav-dropdown__item" href={`/campus-life#${lifeLinks[item]}`} onClick={() => { setOpenDropdown(null); setMenuOpen(false); }}>{item}<span aria-hidden="true">↗</span></a> : academicLinks[item] ? <a className="nav-dropdown__item" href={`/academics#${academicLinks[item]}`} onClick={() => { setOpenDropdown(null); setMenuOpen(false); }}>{item}<span aria-hidden="true">↗</span></a> : campusLinks[item] ? <a className="nav-dropdown__item" href={campusSectionHref(campusLinks[item], currentPage)} onClick={() => { setOpenDropdown(null); setMenuOpen(false); }}>{item}<span aria-hidden="true">↗</span></a> : sectionLinks[item] ? <a className="nav-dropdown__item" href={homeLink(sectionLinks[item])} onClick={() => { setOpenDropdown(null); setMenuOpen(false); }}>{item}<span aria-hidden="true">↗</span></a> : <button className="nav-dropdown__item" disabled>{item}<span>Coming soon</span></button>}</li>)}</ul>
+              <ul>{items.map(item => <li key={item}>{label === 'CBSE' ? (cbseLinks[item] ? <a className="nav-dropdown__item" href={cbseLinks[item]} onClick={() => { setOpenDropdown(null); setMenuOpen(false); }}>{item}<span aria-hidden="true">↗</span></a> : <button className="nav-dropdown__item" disabled>{item}<span>Coming soon</span></button>) : label === 'Achievements' ? <a className="nav-dropdown__item" href={`/achievements#${item === 'Featured recognition' ? 'featured-recognition' : 'browse-achievements'}`} onClick={() => { setOpenDropdown(null); setMenuOpen(false); }}>{item}<span aria-hidden="true">&#8599;</span></a> : lifeLinks[item] ? <a className="nav-dropdown__item" href={`/campus-life#${lifeLinks[item]}`} onClick={() => { setOpenDropdown(null); setMenuOpen(false); }}>{item}<span aria-hidden="true">↗</span></a> : academicLinks[item] ? <a className="nav-dropdown__item" href={`/academics#${academicLinks[item]}`} onClick={() => { setOpenDropdown(null); setMenuOpen(false); }}>{item}<span aria-hidden="true">↗</span></a> : campusLinks[item] ? <a className="nav-dropdown__item" href={campusSectionHref(campusLinks[item], currentPage)} onClick={() => { setOpenDropdown(null); setMenuOpen(false); }}>{item}<span aria-hidden="true">↗</span></a> : sectionLinks[item] ? <a className="nav-dropdown__item" href={homeLink(sectionLinks[item])} onClick={() => { setOpenDropdown(null); setMenuOpen(false); }}>{item}<span aria-hidden="true">↗</span></a> : <button className="nav-dropdown__item" disabled>{item}<span>Coming soon</span></button>}</li>)}</ul>
               {label === 'Admissions' && <EnquiryButton onClick={() => { setMenuOpen(false); setOpenDropdown(null); }} className="nav-dropdown__enquiry">Enquire about admissions <span aria-hidden="true">⟶</span></EnquiryButton>}
             </div>
           </div>
         </div>;
       })}
       <a className="navbar__mobile-link" href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
+      <a href={PARENT_PORTAL_URL} target="_blank" rel="noopener noreferrer" className="button button--parent-login navbar__mobile-link" onClick={() => { setMenuOpen(false); setOpenDropdown(null); }}>Parent Login</a>
       <EnquiryButton onClick={() => { setMenuOpen(false); setOpenDropdown(null); }} className="button button--primary navbar__mobile-link">Enquire Now <span aria-hidden="true">⟶</span></EnquiryButton>
     </nav>
+    <a href={PARENT_PORTAL_URL} target="_blank" rel="noopener noreferrer" className="button button--parent-login navbar__parent-login">Parent Login</a>
     <EnquiryButton onClick={() => { setMenuOpen(false); setOpenDropdown(null); }} className="button button--primary navbar__enquire">Enquire Now <span aria-hidden="true">⟶</span></EnquiryButton>
     <button ref={toggle} className={`menu-toggle ${menuOpen ? 'is-open' : ''}`} aria-label={menuOpen ? 'Close menu' : 'Open menu'} aria-controls="primary-navigation" aria-expanded={menuOpen} onClick={() => { setMenuOpen(!menuOpen); setOpenDropdown(null); }}><span /><span /><span /></button>
   </div></header>;

@@ -34,7 +34,7 @@
     {
       "title": "Streams & school hours",
       "paragraphs": [
-        "The students can opt for 2 streams- Science and Commerce - after their 10th with different combiNations at the +2 level. The school begins at 08:30 A.M. and ends at 03:00 P.M."
+        "The students can opt for 3 streams- Science, Commerce and Humanities - after their 10th with different combinations at the +2 level. The school begins at 08:30 A.M. and ends at 03:15 P.M."
       ]
     },
     {
@@ -48,7 +48,7 @@
     "introduction": [
       "Chinmaya Vidyalaya Kolazhy, Thrissur, like all Chinmaya Vidyalayas in the country is a School With A Difference (SWAD). By this we mean that we do not merely emphasize on academics though we are in the forefront in that field, but we also enable students to adapt to various situations in life through our Chinmaya Vision Programme (CVP) which aims at the holistic development of the individual by adopting the four-pronged programme of integrated development of the personality, inculcation of patriotism, emphasis on Indian culture along with a universal outlook on life.",
       "Our school curriculum is framed to impart value-based education that aims at both spiritual and intellectual development of the child along with the physical and emotional. Our school is one of the leading schools in Kerala in the field of academics. Students are encouraged to think creatively and originally.",
-      "We aim to provide a serene and pristine environment conducive to learning by creating an oasis like place and greenery in the school campus. We have a unique and exclusive herbal garden with about fifty varieties of medicinal plants and we aim to grow more than 100 varieties by the end of 2018. We also have a wonderful collection of flowering plants and an extensive vegetable garden, which provides all the vegetables for the school hostel. Both the herbal and the vegetable garden are tended exclusively by students of class 8 and 9.",
+      "We aim to provide a serene and pristine environment conducive to learning by creating an oasis like place and greenery in the school campus. We have a unique and exclusive herbal garden with about fifty varieties of medicinal plants and we aim to grow more than 100 varieties. We also have a wonderful collection of flowering plants and an extensive vegetable garden, which provides all the vegetables for the school hostel. Both the herbal and the vegetable garden are tended exclusively by students of class 8 and 9.",
       "Children are exposed to Indian culture and heritage right from the lower class. The students and staff celebrate all festivals in its true spirit. The students and teachers under the guidance of the Principal perform activities associated with the function, dress for the occasion and explain the significance of these functions to the children.",
       "Our children learn to see and appreciate the harmony in Creation by giving due importance to all aspects of environmental education. Students prepare Vermi-compost- an excellent organic fertilizer in addition to gardening. We are also enforcing a ban on plastic and encouraging the use of eco-friendly bags, pouches, plates, glasses etc. It is our vision to impart education through a mixture of Science and Spirituality"
     ],
@@ -89,7 +89,7 @@
       },
       {
         "title": "Indian Culture",
-        "intro": "Culture is more than just art forms, festivals and rituals. Culture is the very way of life of a race and its thinking, which makes it unique and special. Under this head, the child is given a wide exposure to the various aspects of our culture, cultural awareness and appreciation of the vast literacy, artistic and scientific heritage of India, explaNations of customs and traditions and cultural motivation through hobbies and projects, etc.",
+        "intro": "Culture is more than just art forms, festivals and rituals. Culture is the very way of life of a race and its thinking, which makes it unique and special. Under this head, the child is given a wide exposure to the various aspects of our culture, cultural awareness and appreciation of the vast literacy, artistic and scientific heritage of India, explanations of customs and traditions and cultural motivation through hobbies and projects, etc.",
         "parts": []
       },
       {
@@ -129,6 +129,194 @@
     {
       "role": "Headmaster",
       "name": "Sri. Madhavadasan K"
+    }
+  ],
+  "teaching": [
+    {
+      "department": "English",
+      "members": [
+        "Smt. Jayashree A",
+        "Smt. Sumangala Raj C R",
+        "Smt. Smitha Balakrishnan",
+        "Smt. Lakshmi V R",
+        "Smt. Nina Manoranjith",
+        "Smt. Sheeja Janardhanan Poovathur",
+        "Smt. Vandana R",
+        "Sri. Hemanth M"
+      ]
+    },
+    {
+      "department": "Hindi",
+      "members": [
+        "Smt. Yamuna G",
+        "Smt. Kumari Bindu R",
+        "Smt. P. Malini Devi",
+        "Smt. Soumya T M",
+        "Smt. Deepa M"
+      ]
+    },
+    {
+      "department": "Sanskrit",
+      "members": [
+        "Smt. Ramya Puthiya Purayil",
+        "Smt. Suma T",
+        "Smt. Bharathi A"
+      ]
+    },
+    {
+      "department": "Malayalam",
+      "members": [
+        "Smt. Sreekala C K",
+        "Smt. Vrinda D",
+        "Smt. Sumangala P K",
+        "Smt. Sreedevi M"
+      ]
+    },
+    {
+      "department": "Mathematics",
+      "members": [
+        "Smt. Ambika G",
+        "Smt. Jyothi P",
+        "Smt. Priya Thampi",
+        "Smt. Jayanthi N P",
+        "Smt. Vima Viswambaran",
+        "Smt. Sahithy M",
+        "Smt. Usha P Nambiar",
+        "Smt. Maya V",
+        "Smt. Vrinda N V"
+      ]
+    },
+    {
+      "department": "Physics",
+      "members": [
+        "Smt. Shaira K N",
+        "Smt. A Saritha Raj",
+        "Ms. Induja V"
+      ]
+    },
+    {
+      "department": "Chemistry",
+      "members": [
+        "Smt. Suma T",
+        "Smt. Asha Vinod Kumar",
+        "Smt. Anumol P",
+        "Smt. Sanjana R"
+      ]
+    },
+    {
+      "department": "Biology",
+      "members": [
+        "Smt. Babitha S",
+        "Smt. Bindu K",
+        "Sri. Madhavadasan K",
+        "Smt. Liji Raj T",
+        "Ms. Sreelakshmy P S"
+      ]
+    },
+    {
+      "department": "Humanities",
+      "members": [
+        "Smt. Nair Anita Vasudev",
+        "Smt. Divya Mohandas",
+        "Smt. Smitha Madhu",
+        "Smt. Divya R"
+      ]
+    },
+    {
+      "department": "Computer Science",
+      "members": [
+        "Smt. Sheeja M",
+        "Smt. Susmitha C",
+        "Shri. Hareeshkumar G",
+        "Smt. Lekha Vasavan",
+        "Smt. Priya Narayanan M"
+      ]
+    },
+    {
+      "department": "Commerce",
+      "members": [
+        "Smt. Bindu T",
+        "Smt. Savitha Sasikumar",
+        "Smt. Ambika K"
+      ]
+    },
+    {
+      "department": "Dance",
+      "members": [
+        "Smt. Jeeja Subhash",
+        "Smt. Sreedivya Sreenadh"
+      ]
+    },
+    {
+      "department": "Music",
+      "members": [
+        "Smt. Reshmi K R"
+      ]
+    },
+    {
+      "department": "Spiritual Education",
+      "members": [
+        "Smt. Suma T"
+      ]
+    },
+    {
+      "department": "Physical Education",
+      "members": [
+        "Smt. Niji N Raju",
+        "Smt. Poornima S R",
+        "Shri. Manikandan C K",
+        "Smt. Anishma M A"
+      ]
+    },
+    {
+      "department": "Drawing",
+      "members": [
+        "Smt. Vini T R",
+        "Smt. Simmi Madathingal"
+      ]
+    },
+    {
+      "department": "Yoga",
+      "members": [
+        "Smt. Remya Sudheesh",
+        "Smt. Manjula K"
+      ]
+    },
+    {
+      "department": "Health & Wellness Teacher",
+      "members": [
+        "Smt. Anju E"
+      ]
+    },
+    {
+      "department": "Librarian",
+      "members": [
+        "Smt. Preethi P Nair"
+      ]
+    },
+    {
+      "department": "Value Education",
+      "members": [
+        "Smt. Mini Ajith"
+      ]
+    },
+    {
+      "department": "Special Education",
+      "members": [
+        "Smt. Asha K Nair"
+      ]
+    },
+    {
+      "department": "Nursery",
+      "members": [
+        "Smt. Sheela Sagar",
+        "Smt. Jyothilekshmi A K",
+        "Smt. Sajitha Suresh",
+        "Smt. Sajitha P",
+        "Smt. Greeshma V",
+        "Smt. Neenu Naveen",
+        "Smt. Bably Mijul"
+      ]
     }
   ],
   "departments": [
@@ -224,7 +412,7 @@
     },
     {
       "name": "Smt. Lakshmi C.",
-      "role": "Coordinatorr"
+      "role": "Coordinator"
     },
     {
       "name": "Shri. Subhash K",

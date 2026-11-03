@@ -20,7 +20,7 @@ export default function AboutSearch({ onNavigate, autoFocus = false, dialog = fa
   return <div className="about-search">
     <form role="search" onSubmit={event => event.preventDefault()}>
       <label htmlFor={id}>{dialog ? 'Search the school story' : 'What would you like to know?'}</label>
-      <div className="search-input-row"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" /><path d="m16 16 5 5" /></svg><input id={id} type="search" value={query} onChange={event => updateQuery(event.target.value)} autoFocus={autoFocus} placeholder="Search names, uniform, school hours, rules…" /><button type="button" onClick={() => updateQuery('')} disabled={!query}>Clear search</button></div>
+      <div className="search-input-row"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" /><path d="m16 16 5 5" /></svg><input id={id} type="search" value={query} onChange={event => updateQuery(event.target.value)} autoFocus={autoFocus} placeholder="Search names, school hours, rules…" /><button type="button" onClick={() => updateQuery('')} disabled={!query}>Clear search</button></div>
     </form>
     <div className="search-suggestions" aria-label="Suggested searches">{suggestions.map(([label, value]) => <button key={label} type="button" onClick={() => updateQuery(value)}>{label}<span aria-hidden="true">↗</span></button>)}</div>
     <p className="search-announcement" role="status">{announcement}</p>

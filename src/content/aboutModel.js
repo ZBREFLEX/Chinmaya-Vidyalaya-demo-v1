@@ -1,4 +1,4 @@
-import content from './about.json' with { type: 'json' };
+﻿import content from './about.json' with { type: 'json' };
 
 // Presentation metadata references the original source arrays; policy text is never copied.
 const ruleLabels = {
@@ -11,22 +11,39 @@ export const ruleTopics = [
   { id: 'families', title: 'Meeting teachers & collecting children', source: [3, 10, 11, 12, 15, 23] },
   { id: 'withdrawal', title: 'Admissions & withdrawal', admissions: true },
   { id: 'guidelines', title: 'Other guidelines', source: [4, 5, 7, 9, 13, 16, 18, 19, 21, 22] },
-].map(topic => ({ ...topic, rules: (topic.admissions ? content.rules[1].items : topic.source.map(i => content.rules[0].items[i])).map((text, i) => ({
-  id: `${topic.admissions ? 'admission' : 'discipline'}-rule-${String((topic.admissions ? i : topic.source[i]) + 1).padStart(2, '0')}`,
-  text,
-  title: topic.admissions ? ruleLabels.admissions[i] : ruleLabels.discipline[topic.source[i]],
-  sourceIds: topic.admissions ? [`admissions:${i + 1}`] : topic.source[i] === 19 ? ['discipline:20', 'discipline:25'] : [`discipline:${topic.source[i] + 1}`],
-})) }));
+].map(topic => ({
+  ...topic, rules: (topic.admissions ? content.rules[1].items : topic.source.map(i => content.rules[0].items[i])).map((text, i) => ({
+    id: `${topic.admissions ? 'admission' : 'discipline'}-rule-${String((topic.admissions ? i : topic.source[i]) + 1).padStart(2, '0')}`,
+    text,
+    title: topic.admissions ? ruleLabels.admissions[i] : ruleLabels.discipline[topic.source[i]],
+    sourceIds: topic.admissions ? [`admissions:${i + 1}`] : topic.source[i] === 19 ? ['discipline:20', 'discipline:25'] : [`discipline:${topic.source[i] + 1}`],
+  }))
+}));
 
-export const uniformGroups = content.rules.slice(2).map((group, index) => ({ ...group, id: `uniform-${index + 1}`, index, gender: index < 3 ? 'girls' : 'boys', classes: [
-  ['lkg', 'ukg', '1', '2', '3', '4', '5'], ['6', '7'], ['8', '9', '10', '11', '12'], ['lkg', 'ukg', '1', '2', '3', '4', '5', '6', '7'], ['8', '9', '10', '11', '12'],
-][index] }));
+export const uniformGroups = content.rules.slice(2).map((group, index) => ({
+  ...group, id: `uniform-${index + 1}`, index, gender: index < 3 ? 'girls' : 'boys', classes: [
+    ['lkg', 'ukg', '1', '2', '3', '4', '5'], ['6', '7'], ['8', '9', '10', '11', '12'], ['lkg', 'ukg', '1', '2', '3', '4', '5', '6', '7'], ['8', '9', '10', '11', '12'],
+  ][index]
+}));
 
 export const peopleGroups = [
   { id: 'management', title: 'Management', label: 'School Management Committee · 2023–2024', records: content.committee },
   { id: 'administration', title: 'Administration', label: 'School leadership, departments & specialist roles', records: [...content.leaders, ...content.departments] },
+  { id: 'teaching', title: 'Teaching staff', label: 'Teaching staff by department', departments: content.teaching },
   { id: 'non-teaching', title: 'Non-teaching staff', label: 'Our non-teaching team', records: content.staff },
-].map(group => ({ ...group, records: group.records.map((record, index) => ({ ...record, id: `${group.id}-person-${String(index + 1).padStart(2, '0')}` })) }));
+].map(group => {
+  if (group.departments) {
+    const records = group.departments.flatMap((dept, di) =>
+      dept.members.map((name, mi) => ({
+        id: `${group.id}-dept-${String(di + 1).padStart(2, '0')}-person-${String(mi + 1).padStart(2, '0')}`,
+        name,
+        role: dept.department,
+      }))
+    );
+    return { ...group, records };
+  }
+  return { ...group, records: group.records.map((record, index) => ({ ...record, id: `${group.id}-person-${String(index + 1).padStart(2, '0')}` })) };
+});
 
 const roman = { i: '1', ii: '2', iii: '3', iv: '4', v: '5', vi: '6', vii: '7', viii: '8', ix: '9', x: '10', xi: '11', xii: '12' };
 export function normalize(text) {
@@ -54,7 +71,7 @@ content.vision.pillars.forEach((pillar, i) => {
   pillar.parts.forEach((part, j) => entry(`pillar-${i + 1}-part-${j + 1}`, part.title, pillar.title, part.text, 'vision', { pillar: i, disclosure: `pillar-more-${i + 1}` }));
 });
 entry('principal-letter', 'Principal’s message · Bini M', 'Principal', content.principal.join(' '), 'principal', { disclosure: 'principal-message' }, 'principal letter message Hari Om');
-entry('school-day-text', 'School hours & senior secondary streams', 'Parent essentials', content.story[5].paragraphs.join(' '), 'rules', { disclosure: 'school-day' }, 'school hours opening closing school time timings');
+entry('school-day-text', 'School hours & Senior Secondary streams', 'Parent essentials', content.story[5].paragraphs.join(' '), 'rules', { disclosure: 'school-day' }, 'school hours opening closing school time timings');
 entry('management-introduction', 'Trust & managing committee', 'Management', content.story[0].paragraphs[0], 'staff', { group: 'management', disclosure: 'people-directory' });
 peopleGroups.forEach(group => group.records.forEach(record => entry(record.id, record.name, group.label, record.role, 'staff', { group: group.id, disclosure: 'people-directory' }, `${group.title} staff person department`)));
 ruleTopics.forEach(topic => topic.rules.forEach(rule => entry(rule.id, rule.title, `Parent essentials · ${topic.title}`, rule.text, 'rules', { disclosure: `rules-${topic.id}` }, topic.admissions ? 'TC transfer certificate admissions withdrawal' : 'school rules guidelines')));
@@ -86,6 +103,7 @@ export const detailTargets = Object.fromEntries(searchIndex.map(item => [item.id
 Object.assign(detailTargets, {
   management: { id: 'management', state: { group: 'management', disclosure: 'people-directory' } },
   administration: { id: 'administration', state: { group: 'administration', disclosure: 'people-directory' } },
+  teaching: { id: 'teaching', state: { group: 'teaching', disclosure: 'people-directory' } },
   'non-teaching': { id: 'non-teaching', state: { group: 'non-teaching', disclosure: 'people-directory' } },
 });
 content.vision.pillars.forEach((_, index) => {

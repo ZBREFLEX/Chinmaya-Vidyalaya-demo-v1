@@ -1,0 +1,264 @@
+/* PDF Viewer Modal Dialog */
+.pdf-modal {
+  position: fixed;
+  inset: 0;
+  margin: auto;
+  width: min(1240px, calc(100vw - 48px));
+  height: min(92vh, 920px);
+  max-width: 100vw;
+  max-height: 100dvh;
+  padding: 0;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-medium, 24px);
+  background: var(--color-white, #ffffff);
+  box-shadow: 0 25px 60px rgba(20, 52, 73, 0.28), 0 0 0 1px rgba(221, 229, 236, 0.6);
+  color: var(--color-heading, #143449);
+  overflow: hidden;
+  z-index: 1000;
+}
+
+.pdf-modal::backdrop {
+  background: rgba(14, 39, 56, 0.72);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+.pdf-modal__shell {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background: #fdfefe;
+}
+
+/* Modal Header */
+.pdf-modal__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 16px 24px;
+  background: #ffffff;
+  border-bottom: 1px solid var(--color-border, #dde5ec);
+  flex-shrink: 0;
+}
+
+.pdf-modal__title-group {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 0;
+}
+
+.pdf-modal__badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 9px;
+  border-radius: 8px;
+  background: #eef8fb;
+  color: var(--color-action, #14758d);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  border: 1px solid #c7e5ed;
+  flex-shrink: 0;
+}
+
+.pdf-modal__headings {
+  min-width: 0;
+}
+
+.pdf-modal__category {
+  display: block;
+  font-size: 0.72rem;
+  color: var(--color-action, #14758d);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+.pdf-modal__title {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 650;
+  color: var(--color-heading, #143449);
+  line-height: 1.35;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 580px;
+}
+
+.pdf-modal__actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.pdf-modal__tab-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 15px;
+  border-radius: 999px;
+  border: 1px solid var(--color-border, #dde5ec);
+  background: #ffffff;
+  color: var(--color-heading, #143449);
+  font-size: 0.8rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.pdf-modal__tab-btn:hover {
+  background: var(--color-soft-blue, #eff9fc);
+  color: var(--color-action, #14758d);
+  border-color: #badbe7;
+}
+
+.pdf-modal__download-btn {
+  min-height: 40px !important;
+  padding: 8px 18px !important;
+  font-size: 0.8rem !important;
+  gap: 8px !important;
+  white-space: nowrap;
+}
+
+.pdf-modal__close-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border-radius: 50%;
+  border: 1px solid var(--color-border, #dde5ec);
+  background: #ffffff;
+  color: var(--color-heading, #143449);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.pdf-modal__close-btn:hover {
+  background: #f1f4f6;
+  color: #c92a2a;
+  border-color: #e0b4b4;
+  transform: rotate(90deg);
+}
+
+/* Modal Body & Frame */
+.pdf-modal__body {
+  flex: 1;
+  position: relative;
+  background: #474d52;
+  overflow: hidden;
+  min-height: 300px;
+}
+
+.pdf-modal__iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+  background: #525659;
+}
+
+/* Modal Footer */
+.pdf-modal__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 10px 24px;
+  background: #f8fafc;
+  border-top: 1px solid var(--color-border, #dde5ec);
+  font-size: 0.78rem;
+  color: var(--color-text, #6b7985);
+  flex-shrink: 0;
+}
+
+.pdf-modal__footer-text {
+  margin: 0;
+}
+
+.pdf-modal__footer-text strong {
+  color: var(--color-heading, #143449);
+}
+
+.pdf-modal__fallback-link {
+  color: var(--color-action, #14758d);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  white-space: nowrap;
+}
+
+.pdf-modal__fallback-link:hover {
+  color: var(--color-heading, #143449);
+}
+
+/* Mobile & Tablet Optimizations */
+@media (max-width: 860px) {
+  .pdf-modal {
+    width: 100%;
+    height: 100dvh;
+    max-height: 100dvh;
+    border-radius: 0;
+    border: 0;
+  }
+
+  .pdf-modal__header {
+    padding: 12px 16px;
+    gap: 12px;
+  }
+
+  .pdf-modal__title {
+    font-size: 0.95rem;
+    max-width: 240px;
+  }
+
+  .pdf-modal__tab-btn span,
+  .pdf-modal__download-btn span {
+    display: none;
+  }
+
+  .pdf-modal__tab-btn,
+  .pdf-modal__download-btn {
+    padding: 8px 12px !important;
+    min-height: 38px !important;
+  }
+
+  .pdf-modal__footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    padding: 8px 16px;
+    font-size: 0.74rem;
+  }
+
+  .pdf-modal__fallback-link {
+    white-space: normal;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .pdf-modal[open] {
+    animation: pdf-modal-pop 0.22s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+}
+
+@keyframes pdf-modal-pop {
+  from {
+    opacity: 0;
+    transform: scale(0.97) translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+

@@ -146,6 +146,13 @@
 .about-directory dt { color: var(--color-heading); font-size: 16px; line-height: 1.6; }
 .about-directory dd { margin: 6px 0 0; font-size: 13px; line-height: 1.6; }
 .print-directory { display: none; }
+/* Teaching staff – department-grouped layout */
+.teaching-departments { margin-top: 4px; }
+.teaching-dept-section { margin-bottom: 32px; }
+.teaching-dept-heading { font-size: 13px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--color-action); border-bottom: 1px solid var(--color-border); padding-bottom: 8px; margin: 0 0 10px; }
+.teaching-dept-members { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 0 36px; }
+.teaching-dept-members li { color: var(--color-heading); font-size: 15px; padding: 9px 0; border-bottom: 1px solid var(--color-border); line-height: 1.5; }
+@media (max-width: 700px) { .teaching-dept-members { grid-template-columns: 1fr; } }
 .essentials-scene { background: #f8fcff; }
 .essentials-heading { display: grid; grid-template-columns: 1fr 1fr; align-items: end; gap: 8%; margin-bottom: 30px; }
 .essentials-heading > p { max-width: 480px; }
