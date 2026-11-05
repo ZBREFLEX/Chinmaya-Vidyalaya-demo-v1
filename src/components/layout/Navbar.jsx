@@ -16,7 +16,7 @@ const destinations = [
   { label: 'Achievements', items: ['Featured recognition', 'Browse achievements'] },
   { label: 'Admissions', items: ['Admission Process', 'Eligibility', 'School Prospectus'] },
 ];
-const cbseLinks = { 'Mandatory Public Disclosure': '/cbse/mandatory-public-disclosure' };
+const cbseLinks = { 'Mandatory Public Disclosure': '/cbse/mandatory-public-disclosure', Affiliation: '/cbse/affiliation', Accreditation: '/cbse/accreditation', Declaration: '/cbse/declarations', 'Text Books': '/cbse/text-books' };
 const lifeLinks = Object.fromEntries(lifeSections.map(([id, label]) => [label, id]));
 const academicLinks = Object.fromEntries(academicSections.map(([id, label]) => [label, id]));
 const campusLinks = { Infrastructure: 'infrastructure', 'Verdant View': 'verdant-view', Facilities: 'facilities' };
@@ -111,15 +111,15 @@ export default function Navbar({ currentPage = 'home' }) {
             if (!event.currentTarget.contains(event.relatedTarget)) setOpenDropdown(current => current === index ? null : current);
           }}
         >
-          {label === 'Achievements' || label === 'About' || label === 'Incampus' || label === 'Academics' || label === 'Campus Life' ? <div className="nav-dropdown__heading">
-            <a className="nav-dropdown__page-link" href={label === 'Achievements' ? '/achievements' : label === 'Campus Life' ? '/campus-life' : label === 'Academics' ? '/academics' : label === 'Incampus' ? '/incampus' : homeLink('#about')} aria-current={label === 'Achievements' ? currentPage === 'achievements' ? 'page' : undefined : label === 'Campus Life' ? currentPage === 'campus-life' ? 'page' : undefined : label === 'Academics' ? currentPage === 'academics' ? 'page' : undefined : label === 'Incampus' ? currentPage === 'incampus' ? 'page' : undefined : activeArea === 'about' ? 'location' : undefined} onClick={() => { setOpenDropdown(null); setMenuOpen(false); }}>{label}</a>
+          {label === 'CBSE' || label === 'Achievements' || label === 'About' || label === 'Incampus' || label === 'Academics' || label === 'Campus Life' ? <div className="nav-dropdown__heading">
+            <a className="nav-dropdown__page-link" href={label === 'CBSE' ? '/cbse/mandatory-public-disclosure' : label === 'Achievements' ? '/achievements' : label === 'Campus Life' ? '/campus-life' : label === 'Academics' ? '/academics' : label === 'Incampus' ? '/incampus' : homeLink('#about')} aria-current={label === 'CBSE' ? currentPage.startsWith('cbse-') ? 'page' : undefined : label === 'Achievements' ? currentPage === 'achievements' ? 'page' : undefined : label === 'Campus Life' ? currentPage === 'campus-life' ? 'page' : undefined : label === 'Academics' ? currentPage === 'academics' ? 'page' : undefined : label === 'Incampus' ? currentPage === 'incampus' ? 'page' : undefined : activeArea === 'about' ? 'location' : undefined} onClick={() => { setOpenDropdown(null); setMenuOpen(false); }}>{label}</a>
             <button ref={element => { dropdownTriggers.current[index] = element; }} className="nav-dropdown__trigger nav-dropdown__arrow" aria-label={`${label} sections`} aria-expanded={isOpen} aria-controls={`nav-panel-${index}`} onClick={() => setOpenDropdown(isOpen ? null : index)}><svg viewBox="0 0 16 16" aria-hidden="true"><path d="m4 6 4 4 4-4" /></svg></button>
           </div> : <button
             ref={element => { dropdownTriggers.current[index] = element; }}
             className="nav-dropdown__trigger"
             aria-expanded={isOpen}
             aria-controls={`nav-panel-${index}`}
-            aria-current={label === 'CBSE' && currentPage === 'cbse-disclosure' ? 'page' : undefined}
+            aria-current={label === 'CBSE' && currentPage.startsWith('cbse-') ? 'page' : undefined}
             onClick={() => setOpenDropdown(isOpen ? null : index)}
           >
             {label}<svg viewBox="0 0 16 16" aria-hidden="true"><path d="m4 6 4 4 4-4" /></svg>
@@ -133,7 +133,7 @@ export default function Navbar({ currentPage = 'home' }) {
           </div>
         </div>;
       })}
-      <a className="navbar__mobile-link" href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
+      <a href="/contact" aria-current={currentPage === "contact" ? "page" : undefined} onClick={() => { setMenuOpen(false); setOpenDropdown(null); }}>Contact Us</a>
       <a href={PARENT_PORTAL_URL} target="_blank" rel="noopener noreferrer" className="button button--parent-login navbar__mobile-link" onClick={() => { setMenuOpen(false); setOpenDropdown(null); }}>Parent Login</a>
       <EnquiryButton onClick={() => { setMenuOpen(false); setOpenDropdown(null); }} className="button button--primary navbar__mobile-link">Enquire Now <span aria-hidden="true">⟶</span></EnquiryButton>
     </nav>
