@@ -270,7 +270,7 @@ export default function MandatoryDisclosure({ section = 'disclosure' }) {
             <p className="cbse-notice__contact">
               For compliance enquiries or official verification requests, please write to{' '}
               <a href="mailto:chinvidhya@gmail.com">chinvidhya@gmail.com</a> or contact the office at{' '}
-              <a href={isDeclaration || isTextBooks ? `tel:${schoolPhone.replace(/[^+\d]/g, '')}` : 'tel:04872381270'}>{isDeclaration || isTextBooks ? schoolPhone : '0487 2381270'}</a>.
+              <a href={isDeclaration || isTextBooks ? `tel:${schoolPhone.replace(/[^+\d]/g, '')}` : 'tel:0487220439'}>{isDeclaration || isTextBooks ? schoolPhone : '0487 2381270'}</a>.
             </p>
           </div>
         </section>

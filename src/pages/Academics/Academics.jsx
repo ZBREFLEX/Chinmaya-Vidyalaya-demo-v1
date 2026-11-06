@@ -14,7 +14,7 @@ const assessmentAreas = [
 function CombinationRows({ rows }) {
   return <ol className="academic-combinations">{rows.map(c => <li key={c.id}>
     <span className="academic-combinations__number">Combination {String(c.number).padStart(2, '0')}</span>
-    <p>{c.subjects.map((subject, i) => <span key={i}>{subject}{i < c.subjects.length - 1 && <b aria-hidden="true"> / </b>}</span>)}{c.ambiguous && <sup aria-label="Source punctuation note"> *</sup>}</p>
+    <p>{c.subjects.map((subject, i) => <span key={i}>{subject}{i < c.subjects.length - 1 && <b aria-hidden="true"> / </b>}</span>)}</p>
   </li>)}</ol>;
 }
 function ResultTable({ rows, caption }) {
@@ -149,7 +149,7 @@ export default function Academics() {
         <div ref={comboList}><CombinationRows rows={combinations} />{!combinations.length && <p className="academic-empty">No combinations match this subject in {state.stream}. Select another subject or reset your choices.</p>}</div>
       </div>
       <div className="academic-print-only">{streams.map(stream => <div key={stream}><h3>{stream}</h3><CombinationRows rows={content.combinations.filter(c => c.stream === stream)} /></div>)}</div>
-      <p className="academic-note">* Three Humanities rows print “Economics Psychology” without a comma. That source wording is retained; please confirm the subject separation with the school.</p>
+      <p className="academic-note">Three Humanities rows print “Economics Psychology” without a comma. That source wording is retained; please confirm the subject separation with the school.</p>
       <a href={enquiryUrl} target="_blank" rel="noopener noreferrer" className="academic-text-link">Enquire about subject choices <span aria-hidden="true">↗</span><span className="sr-only"> on WhatsApp (opens in a new tab)</span></a>
     </div></section>
 

@@ -699,18 +699,18 @@
   },
   "staffPhotos": {
     "staff": {
-      "src": "/images/about/teaching-staff-group.png",
+      "src": "/images/about/teaching-staff-group.jpeg",
       "alt": "Chinmaya Vidyalaya staff gathered for a group photograph in the school hall",
       "caption": "Our staff",
-      "width": 1118,
-      "height": 450
+      "width": 1600,
+      "height": 711
     },
     "nonTeaching": {
-      "src": "/images/about/non-teaching-staff-group.png",
-      "alt": "Chinmaya Vidyalaya non-teaching staff gathered for a group photograph outside a campus building",
+      "src": "/images/about/non-teaching-staff-group.jpeg",
+      "alt": "Chinmaya Vidyalaya non-teaching staff gathered for a group photograph in the school hall",
       "caption": "Our non-teaching staff",
-      "width": 800,
-      "height": 400
+      "width": 1600,
+      "height": 731
     }
   }
 }
