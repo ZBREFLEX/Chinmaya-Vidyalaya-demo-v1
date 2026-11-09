@@ -10,7 +10,7 @@ export const facilityChapters = [
 ];
 
 const labs = [
-  { id: 'physics-lab', name: 'Physics', sourceName: 'Physics Lab', aliases: ['physics', 'science lab'], photo: photo('physics-lab.jpg', 800, 533, 'Physics laboratory with workbenches and apparatus', 'Physics Lab.', 'LABORATORIES.pdf', 1, 11) },
+  { id: 'physics-lab', name: 'Physics', sourceName: 'Physics Lab', aliases: ['physics', 'science lab'], photo: { src: '/images/facilities/physics_lab.jpeg', preview: '/images/facilities/physics_lab.jpeg', width: 1600, height: 1067, alt: 'Physics laboratory with workbenches, apparatus and a blackboard', caption: 'Physics Lab.', sources: [{ file: 'LABORATORIES.pdf', page: 1, object: 11 }] } },
   { id: 'chemistry-lab', name: 'Chemistry', sourceName: 'Chemistry Lab', aliases: ['chemistry'], photo: photo('chemistry-lab.jpg', 800, 533, 'Chemistry laboratory with benches and shelves for glassware', 'Chemistry Lab.', 'LABORATORIES.pdf', 2, 36) },
   { id: 'biology-lab', name: 'Biology', sourceName: 'Biology Lab', aliases: ['biology'], photo: photo('biology-lab.jpg', 800, 533, 'Biology laboratory with workbenches and specimens on display', 'Biology Lab.', 'LABORATORIES.pdf', 2, 37) },
   { id: 'mathematics-lab', name: 'Mathematics', sourceName: 'Maths Lab', aliases: ['maths', 'mathematics', 'math'], photo: photo('mathematics-lab.jpg', 800, 533, 'Mathematics laboratory with round tables and learning displays', 'Maths Lab.', 'LABORATORIES.pdf', 3, 44) },

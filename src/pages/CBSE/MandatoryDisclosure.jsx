@@ -112,7 +112,7 @@ export default function MandatoryDisclosure({ section = 'disclosure' }) {
               </div>
               <div className="cbse-stat">
                 <dt>School Code</dt>
-                <dd>{isDeclaration || isTextBooks ? '75026' : '75027'}</dd>
+                <dd>{isDeclaration || isTextBooks ? '75026' : '75026'}</dd>
               </div>
               <div className="cbse-stat">
                 <dt>Public Records</dt>

@@ -7,10 +7,12 @@ import Incampus from './pages/Incampus/Incampus';
 import Academics from './pages/Academics/Academics';
 import MandatoryDisclosure from './pages/CBSE/MandatoryDisclosure';
 import Contact from './pages/Contact/Contact';
+import Admissions from './pages/Admissions/Admissions';
 const CampusLife = lazy(() => import('./pages/CampusLife/CampusLife'));
 const Achievements = lazy(() => import('./pages/Achievements/Achievements'));
 
 const pageMetadata = {
+  admissions: { title: 'Admissions | Chinmaya Vidyalaya Kolazhy', description: 'Find the admission procedure, open the admission form and connect with Chinmaya Vidyalaya Kolazhy on WhatsApp.' },
   'cbse-text-books': { title: 'Text Books & CBSE Curriculum | Chinmaya Vidyalaya Kolazhy', description: 'Read the school’s textbook list for 2025–2026 and open the linked CBSE Academic curriculum.' },
   'cbse-declarations': { title: 'Declarations | CBSE | Chinmaya Vidyalaya Kolazhy', description: 'Read and download school declarations on homework, single-shift operation, science practicals and the 2025–2026 textbook list.' },
   'cbse-accreditation': { title: 'Accreditation | CBSE | Chinmaya Vidyalaya Kolazhy', description: 'View school information and non-teaching, primary and nursery staff records.' },
@@ -25,6 +27,7 @@ const pageMetadata = {
 };
 
 function getPage(pathname) {
+  if (/^\/admissions\/?$/.test(pathname)) return 'admissions';
   if (/^\/cbse\/text-books\/?$/.test(pathname)) return 'cbse-text-books';
   if (/^\/cbse\/declarations?\/?$/.test(pathname)) return 'cbse-declarations';
   if (/^\/cbse\/accreditation\/?$/.test(pathname)) return 'cbse-accreditation';
@@ -70,6 +73,8 @@ export default function App() {
         <Suspense fallback={<main id="main" className="container"><p>Loading Campus Life…</p></main>}>
           <CampusLife />
         </Suspense>
+      ) : currentPage === 'admissions' ? (
+        <Admissions />
       ) : currentPage === 'contact' ? (
         <Contact />
       ) : currentPage === 'academics' ? (
